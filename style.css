@@ -1,0 +1,40 @@
+body {
+    background-color: rgb(29, 29, 29);
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+label {
+    display: flex;
+    align-items: center;
+}
+
+#components{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.section{
+    margin: .5rem;
+    padding: .5rem;
+    border-radius: .3rem;
+    border: 1px solid white;
+}
+
+/* Hide the checkbox */
+#toggle-checkbox {
+    display: none;
+}
+
+/* Default styles for the content */
+#content {
+    height: 0;
+    overflow: hidden;
+    transition: height 0.3s ease;
+}
+
+/* Styles when the checkbox is checked */
+#toggle-checkbox:checked+label+#content {
+    height: 100px;
+    /* Adjust height as needed */
+}
