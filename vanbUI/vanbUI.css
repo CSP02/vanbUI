@@ -347,3 +347,5 @@ button[vanb="true"]:active:hover {
 input[vanb="true"][type="checkbox"][variant="on-off"]:hover {
     cursor: pointer;
 }
+
+/* TODO: responsiveness for different viewports */
