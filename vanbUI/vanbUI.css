@@ -1,6 +1,9 @@
 *[vanb="true"] {
     transition: .2s ease;
     font-weight: normal;
+    display: block;
+    height: fit-content;
+    width: fit-content;
 }
 
 *[vanb="true"]::before,
@@ -8,10 +11,14 @@
     transition: .2s ease;
 }
 
+
 button[vanb="true"][variant="primary"],
 button[vanb="true"][variant="success"],
-button[vanb="true"][variant="error"] {
+button[vanb="true"][variant="error"],
+button[vanb="true"][variant="black"],
+button[vanb="true"][variant="white"] {
     min-width: 10dvw;
+    width: auto;
     background-color: #7A77FF;
     border: none;
     border-radius: .3rem;
@@ -22,6 +29,16 @@ button[vanb="true"][variant="error"] {
     padding: .7rem;
     margin: .5rem;
     font-weight: 300;
+}
+
+button[vanb="true"][variant="black"] {
+    background-color: #050505;
+    color: white;
+}
+
+button[vanb="true"][variant="white"] {
+    background-color: #fafafa;
+    color: black;
 }
 
 button[vanb="true"][variant="success"] {
@@ -170,27 +187,28 @@ img[vanb="true"][type="avatar_small"] {
     border-radius: 50%;
 }
 
-accordian {
+accordion {
     margin: .5rem;
     padding: .5rem;
 }
 
-accordian,
+accordion,
 acdescription {
     transition: .2s ease;
 }
 
-input[vanb="true"][variant="accordian"][type="checkbox"] {
+input[vanb="true"][variant="accordion"][type="checkbox"] {
     display: none;
 }
 
-input[vanb="true"][variant="accordian"][type="checkbox"]+label::after {
+input[vanb="true"][variant="accordion"][type="checkbox"]+label::after {
     font: var(--fa-font-solid);
     content: "\f107";
     transition: .2s ease;
 }
 
-accordian label {
+accordion label {
+    max-width: 40vw;
     font-weight: bold;
     justify-content: space-between;
     padding: .5rem;
@@ -198,7 +216,7 @@ accordian label {
     border-radius: .3rem;
 }
 
-accordian label:hover {
+accordion label:hover {
     transition: .2s ease;
     cursor: pointer;
     background-color: rgba(0, 0, 0, 0.192);
@@ -216,15 +234,99 @@ acdescription {
     margin: .5rem;
 }
 
-input[vanb="true"][variant="accordian"][type="checkbox"]:checked+label+acdescription {
+input[vanb="true"][variant="accordion"][type="checkbox"]:checked+label+acdescription {
     transition: .2s ease;
     max-height: 50dvh;
     padding-bottom: 1rem;
 }
 
-input[vanb="true"][variant="accordian"][type="checkbox"]:checked+label::after {
+input[vanb="true"][variant="accordion"][type="checkbox"]:checked+label::after {
     transition: .2s ease;
     transform: rotate(-180deg);
+}
+
+alert {
+    display: grid;
+    padding: 1rem;
+    background-color: transparent;
+    border: 1px solid rgb(102, 102, 102);
+    margin: .5rem;
+    border-radius: .5rem;
+    max-width: 40vw;
+    height: fit-content;
+}
+
+alert[type="error"] {
+    border: 1px solid rgb(127, 29, 29);
+    color: rgb(127, 29, 29);
+}
+
+atitle::before {
+    margin: .3rem 1rem .3rem .3rem;
+    font-size: 12pt;
+    line-height: 1.25rem;
+}
+
+alert[variant="terminal"][type="error"] atitle::before {
+    content: "\f06a";
+    font: var(--fa-font-solid);
+
+}
+
+alert[variant="general"][type="error"] atitle::before {
+    content: "\f071";
+    font: var(--fa-font-solid);
+
+}
+
+alert[variant="general"][type="info"] atitle::before {
+    content: "\f135";
+    font: var(--fa-font-solid);
+}
+
+alert[variant="terminal"][type="info"] atitle::before {
+    content: "\f120";
+    font: var(--fa-font-solid);
+    margin: .3rem 1rem .3rem .3rem;
+    font-size: 12pt;
+    line-height: 1.25rem;
+}
+
+badge {
+    transition: .2s ease;
+    max-width: 10vw;
+    width: fit-content;
+    height: fit-content;
+    border-radius: 45px;
+    background-color: white;
+    color: rgb(0, 0, 0);
+    padding: .125rem .625rem;
+    margin: .3rem;
+    display: block;
+    font-size: 12pt;
+    font-weight: bold;
+}
+
+badge:hover{
+    cursor: default;
+    opacity: .7;
+}
+
+/* TODO: styling Alerts */
+/* alert[variant="dialog"] adialog{
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.2);
+} */
+
+atitle {
+    margin-bottom: .25rem;
+    font-weight: bold;
+}
+
+alertdes {
+    margin-left: calc(1.4rem + 12pt);
 }
 
 /**
@@ -232,9 +334,14 @@ input[vanb="true"][variant="accordian"][type="checkbox"]:checked+label::after {
 */
 
 button[vanb="true"]:hover {
-    opacity: .7;
+    opacity: .8;
     box-shadow: rgb(0, 0, 0) 0px 2px 10px;
     cursor: pointer;
+}
+
+button[vanb="true"]:active:hover {
+    opacity: .6;
+    box-shadow: none;
 }
 
 input[vanb="true"][type="checkbox"][variant="on-off"]:hover {

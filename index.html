@@ -40,6 +40,8 @@
             <button type="submit" vanb="true" variant="primary">General</button>
             <button type="submit" vanb="true" variant="success">Success</button>
             <button type="submit" vanb="true" variant="error">Error</button>
+            <button type="submit" vanb="true" variant="black">Black</button>
+            <button type="submit" vanb="true" variant="white">White</button>
         </div>
         <div id="checkboxs" class="section">
             <h1>Checkboxes: </h1>
@@ -69,21 +71,71 @@
             </label>
         </div>
 
-        <div id="shadcn_components" class="section">
-            <h1>Shadcn:</h1>
-            <img src="https://cdn.discordapp.com/attachments/243005537342586880/1220748415210881034/gradient.png?ex=6610118e&is=65fd9c8e&hm=84f2fdf6261ce6c2c2426879d5aad2700e780073373db12d6b1dca05cf833f7a&"
-                alt="duckie's pfp" vanb="true" type="avatar_small">
-
-            <h1>Accordian:</h1>
-            <accordian>
-                <input type="checkbox" vanb="true" variant="accordian" name="test" id="test">
-                <label for="test">Test</label>
-                <acdescription id="wrapper">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe animi aspernatur sit excepturi, aut,
-                    neque voluptates numquam adipisci expedita tempora aliquid, velit necessitatibus. Nulla
-                    exercitationem, reprehenderit illum officia ut quisquam.
-                </acdescription>
-            </accordian>
+        <div id="other_components" class="section">
+            <h1>Other components:</h1>
+            <div id="others">
+                <div>
+                    <h3>Avatar:</h3>
+                    <img src="https://cdn.discordapp.com/attachments/243005537342586880/1220748415210881034/gradient.png?ex=6610118e&is=65fd9c8e&hm=84f2fdf6261ce6c2c2426879d5aad2700e780073373db12d6b1dca05cf833f7a&"
+                        alt="duckie's pfp" vanb="true" type="avatar_small">
+                </div>
+                <div>
+                    <h3>accordion:</h3>
+                    <accordion>
+                        <input type="checkbox" vanb="true" variant="accordion" name="test" id="test">
+                        <label for="test">Test</label>
+                        <acdescription id="wrapper">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe animi aspernatur sit
+                            excepturi,
+                            aut,
+                            neque voluptates numquam adipisci expedita tempora aliquid, velit necessitatibus. Nulla
+                            exercitationem, reprehenderit illum officia ut quisquam.
+                        </acdescription>
+                    </accordion>
+                </div>
+                <div>
+                    <h3>Alerts:</h3>
+                    <alert variant="terminal" type="info">
+                        <atitle>Alert title!</atitle>
+                        <alertdes>
+                            Hee hoo this is a terminal variant, info type alert
+                        </alertdes>
+                    </alert>
+                    <alert variant="terminal" type="error">
+                        <atitle>Alert title!</atitle>
+                        <alertdes>
+                            Hee hoo this is a terminal variant, error type alert
+                        </alertdes>
+                    </alert>
+                    <alert variant="general" type="info">
+                        <atitle>Alert title!</atitle>
+                        <alertdes>
+                            Hee hoo this is a general variant, info type alert
+                        </alertdes>
+                    </alert>
+                    <alert variant="general" type="error">
+                        <atitle>Alert title!</atitle>
+                        <alertdes>
+                            Hee hoo this is a general variant, error type alert
+                        </alertdes>
+                    </alert>
+                </div>
+                <div>
+                    <h3>Badge:</h3>
+                    <badge>Badge</badge>
+                </div>
+                <!-- TODO: Alerts -->
+                <!-- <h1>Alert dialogs:</h1>
+                <alert variant="dialog">
+                    <button vanb="true" variant="alert">Show dialog</button>
+                    <adialog>
+                        Heehoo this is the dialog!
+                        <dialogbuttons>
+                            <button vanb="true" variant="outline">Close</button>
+                        </dialogbuttons>
+                    </adialog>
+                </alert> -->
+            </div>
         </div>
     </div>
 </body>
