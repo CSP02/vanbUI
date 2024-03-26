@@ -18,7 +18,8 @@ button[vanb="true"][variant="error"],
 button[vanb="true"][variant="black"],
 button[vanb="true"][variant="white"],
 button[vanb="true"][variant="outline"],
-button[vanb="true"][variant="ghost"] {
+button[vanb="true"][variant="ghost"],
+button[vanb="true"][variant="loading"] {
     width: auto;
     background-color: #7A77FF;
     border: none;
@@ -29,6 +30,23 @@ button[vanb="true"][variant="ghost"] {
     margin: .5rem;
     font-size: 16pt;
     font-weight: 300;
+}
+
+button[vanb="true"][variant="loading"] {
+    background-color: #9b9b9b;
+    color: rgb(39, 39, 39);
+}
+
+button[vanb="true"][variant="loading"]::before {
+    content: "\f1ce";
+    font: var(--fa-font-solid);
+    margin: 0 .5rem 0 0;
+    position: relative;
+    display: inline-block;
+    height: 1rem;
+    width: 1rem;
+    font-size: 1rem;
+    animation: spin 1s linear infinite;
 }
 
 button[vanb="true"][variant="outline"] {
@@ -348,9 +366,18 @@ button[vanb="true"][variant="ghost"]:hover {
     background-color: rgba(255, 255, 255, 0.082);
 }
 
+
 button[vanb="true"]:active:hover {
     opacity: .6;
     box-shadow: none;
+}
+
+button[vanb="true"][variant="loading"]:hover {
+    opacity: 1;
+    box-shadow: none;
+    border: none;
+    background-color: #9b9b9b;
+    cursor: default;
 }
 
 input[vanb="true"][type="checkbox"][variant="on-off"]+label:hover {
@@ -358,3 +385,12 @@ input[vanb="true"][type="checkbox"][variant="on-off"]+label:hover {
 }
 
 /* TODO: responsiveness for different viewports */
+
+/**
+* ? Animations
+*/
+@keyframes spin {
+    100% {
+        transform: rotate(1turn);
+    }
+}
