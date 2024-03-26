@@ -199,7 +199,9 @@ acdescription {
 }
 
 input[vanb="true"][variant="accordion"][type="checkbox"] {
-    display: none;
+    display: block;
+    height: 0;
+    width: 0;
 }
 
 input[vanb="true"][variant="accordion"][type="checkbox"]+label::after {
@@ -209,8 +211,9 @@ input[vanb="true"][variant="accordion"][type="checkbox"]+label::after {
 }
 
 accordion label {
-    max-width: 40vw;
+    width: 40vw;
     font-weight: bold;
+    display: flex;
     justify-content: space-between;
     padding: .5rem;
     transition: .2s ease;
