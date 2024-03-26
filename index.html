@@ -23,7 +23,7 @@
 <body>
     <script>
         window.onload = () => {
-            const checkbox = document.querySelector('input[type="checkbox"]');
+            const checkbox = document.querySelector('input[id="checkbox_on"]');
 
             checkbox.addEventListener('change', function () {
                 if (checkbox.checked) {
@@ -43,21 +43,16 @@
             <button vanb="true" variant="black">Black</button>
             <button vanb="true" variant="white">White</button>
             <button vanb="true" variant="outline">Outline</button>
+            <button vanb="true" variant="ghost">Ghost</button>
         </div>
         <div id="checkboxs" class="section">
             <h1>Checkboxes: </h1>
-            <label for="checkbox_on">
-                <p>Checkbox on</p>
-                <input type="checkbox" name="checkbox_on" id="checkbox_on" vanb="true" variant="on-off" checked>
-            </label>
-            <label for="checkbox_off">
-                <p>Checkbox off</p>
-                <input type="checkbox" name="checkbox_off" id="checkbox_off" vanb="true" variant="on-off">
-            </label>
-            <label for="general_checkbox">
-                <p>General checkbox</p>
-                <input type="checkbox" name="general_checkbox" id="general_checkbox" vanb="true" variant="checkbox">
-            </label>
+            <input type="checkbox" name="checkbox_on" id="checkbox_on" vanb="true" variant="on-off" checked="true">
+            <label for="checkbox_on">Checkbox on</label>
+            <input type="checkbox" name="checkbox_off" id="checkbox_off" vanb="true" variant="on-off">
+            <label for="checkbox_off">Checkbox off</label>
+            <input type="checkbox" name="general_checkbox" id="general_checkbox" vanb="true" variant="checkbox">
+            <label for="general_checkbox">General checkbox</label>
         </div>
         <div id="inputs" class="section">
             <h1>Input:</h1>
