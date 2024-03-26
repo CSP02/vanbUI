@@ -16,18 +16,23 @@ button[vanb="true"][variant="primary"],
 button[vanb="true"][variant="success"],
 button[vanb="true"][variant="error"],
 button[vanb="true"][variant="black"],
-button[vanb="true"][variant="white"] {
-    min-width: 10dvw;
+button[vanb="true"][variant="white"],
+button[vanb="true"][variant="outline"] {
     width: auto;
     background-color: #7A77FF;
     border: none;
     border-radius: .3rem;
     display: block;
-
     color: white;
-    padding: .7rem;
+    padding: .5rem 1rem;
     margin: .5rem;
+    font-size: 16pt;
     font-weight: 300;
+}
+
+button[vanb="true"][variant="outline"] {
+    outline: 1px solid rgb(36, 36, 36);
+    background-color: transparent;
 }
 
 button[vanb="true"][variant="black"] {
@@ -340,6 +345,13 @@ button[vanb="true"]:hover {
     opacity: .8;
     box-shadow: rgb(0, 0, 0) 0px 2px 10px;
     cursor: pointer;
+}
+
+button[vanb="true"][variant="outline"]:hover {
+    box-shadow: none;
+    border: none;
+    outline: 1px solid rgba(36, 36, 36, 0);
+    background-color: rgba(255, 255, 255, 0.082);
 }
 
 button[vanb="true"]:active:hover {
