@@ -1,9 +1,10 @@
 *[vanb="true"] {
     transition: .2s ease;
-    font-weight: normal;
+    font-weight: 500;
     display: block;
     height: fit-content;
     width: fit-content;
+    font-size: .875rem;
 }
 
 *[vanb="true"]::before,
@@ -23,13 +24,13 @@ button[vanb="true"][variant="loading"] {
     width: auto;
     background-color: #7A77FF;
     border: none;
-    border-radius: .3rem;
+    border-radius: calc(.5rem - 2px);
     display: block;
     color: white;
-    padding: .5rem 1rem;
+    padding: 1rem 2rem;
     margin: .5rem;
-    font-size: 16pt;
-    font-weight: 300;
+    font-size: .875rem;
+    font-weight: 500;
 }
 
 button[vanb="true"][variant="loading"] {
@@ -83,6 +84,7 @@ input[vanb="true"][type="checkbox"][variant="on-off"] {
 
 input[vanb="true"][type="checkbox"][variant="on-off"]+label::after {
     font: var(--fa-font-solid);
+    color: white;
     font-size: 18pt;
     content: "\f111";
     display: flex;
@@ -135,8 +137,8 @@ div[vanb="true"][type="text"][variant="input"][contenteditable="true"] {
     display: block;
     font-size: 14pt;
     color: white;
-    outline: 3px solid #695CFF77;
-    background-color: #1d1d1d;
+    outline: 3px solid rgba(70, 70, 70);
+    background-color: transparent;
     border: none;
     border-radius: .3rem;
 }
@@ -147,7 +149,7 @@ div[vanb="true"][type="text"][variant="input"][contenteditable="true"]::before {
     transition: .2s ease-in-out;
     color: white;
     transform: translateY(-22px);
-    background: linear-gradient(transparent 50%, #1d1d1d 50% 100%);
+    background: linear-gradient(transparent .2rem .4rem, #000000 .4rem .5rem, transparent .5rem 100%);
     margin: 0;
     font-size: 10pt;
     padding: 0 0.2rem;
@@ -168,9 +170,8 @@ div[vanb="true"][type="text"][variant="input"][contenteditable="true"]:focus::be
     position: absolute;
     transition: .2s ease-in-out;
     color: white;
-    transform: translateY(-22px);
-    background: linear-gradient(transparent 50%, #1d1d1d 50% 100%);
-    margin: 0;
+    margin-top: -1.2rem;
+    background: linear-gradient(transparent .2rem .4rem, #000000 .4rem .5rem, transparent .5rem 100%);
     font-size: 10pt;
     padding: 0 0.2rem;
     opacity: 1;
@@ -185,7 +186,26 @@ div[vanb="true"][security="true"]::before {
 }
 
 div[vanb="true"][type="text"][variant="input"][contenteditable="true"]:focus {
-    outline: 3px solid rgb(110, 94, 255);
+    outline: 3px solid rgb(255, 255, 255);
+}
+
+input[vanb=true][type="text"][variant="input"],
+input[vanb=true][type="password"][variant="input"] {
+    padding: 1rem 1.5rem;
+    font-size: .875rem;
+    margin: .5rem;
+    border-radius: calc(.5rem - 2px);
+    border: 1px solid rgb(97, 97, 97);
+    background: transparent;
+    color: white;
+    outline: 3px solid transparent;
+    font-weight: 500;
+}
+
+input[vanb=true][type="text"][variant="input"]:focus,
+input[vanb=true][type="password"][variant="input"]:focus {
+    outline: 3px solid white;
+    outline-offset: 2px;
 }
 
 input[vanb="true"][type="checkbox"][variant="on-off"]:checked+label::after {

@@ -1,7 +1,7 @@
 body {
     background-color: hsl(240 10% 3.9%);
-    color: white;
-    font-family: 'Roboto', sans-serif;
+    color: rgb(187, 187, 187);
+    font-family: "Roboto", sans-serif;
 }
 
 label {
@@ -15,10 +15,11 @@ label {
 }
 
 .section {
+    min-width: 30vw;
     margin: .5rem;
     padding: .5rem;
     border-radius: .3rem;
-    border: 1px solid white;
+    border: 1px solid rgb(85, 85, 85);
 }
 
 /* Hide the checkbox */
@@ -49,4 +50,14 @@ label {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+}
+
+#checkboxs{
+    display: grid;
+}
+
+.inputs label{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
 }
