@@ -21,7 +21,6 @@ button[vanb="true"][variant="white"],
 button[vanb="true"][variant="outline"],
 button[vanb="true"][variant="ghost"],
 button[vanb="true"][variant="loading"] {
-    width: auto;
     background-color: #7A77FF;
     border: none;
     border-radius: calc(.5rem - 2px);

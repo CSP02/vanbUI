@@ -1,63 +1,257 @@
-body {
-    background-color: hsl(240 10% 3.9%);
-    color: rgb(187, 187, 187);
-    font-family: "Roboto", sans-serif;
+/**
+* ? Variables
+*/
+:root {
+    --primary-color: rgb(8, 8, 8);
+    --small-font: 16pt;
+    --medium-font: 22pt;
+    --large-font: 20pt;
+    --basic-pad: 1rem;
+    --small-pad: .5rem;
+    --primary-font-color: rgb(241, 241, 241);
+    --default-link-color: rgb(107, 159, 255);
 }
 
-label {
+/**
+* ? Resetting and styling some elements
+*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--primary-color);
+    color: var(--primary-font-color);
+    font-family: "Quicksand", sans-serif;
+    letter-spacing: .6px;
+    font-weight: normal;
+    scroll-behavior: smooth;
+}
+
+a {
+    transition: .2s ease;
+    text-decoration: none;
+    color: var(--default-link-color);
+}
+
+ul {
+    list-style-type: none;
     display: flex;
     align-items: center;
 }
 
-#components {
+.fas {
+    font-size: 9pt;
+}
+
+/**
+* ? Elements
+*/
+#page_wrapper {
+    height: 100dvh;
+    overflow-y: scroll;
+}
+
+#navigation {
+    height: 10dvh;
+    width: 100dvw;
     display: flex;
-    flex-wrap: wrap;
+    position: fixed;
+    justify-content: flex-end;
+    padding: var(--small-pad);
+    transition: .2s ease;
+    font-size: var(--medium-font);
 }
 
-.section {
-    min-width: 30vw;
-    margin: .5rem;
-    padding: .5rem;
-    border-radius: .3rem;
-    border: 1px solid rgb(85, 85, 85);
+.nav {
+    background-color: transparent;
+    border-bottom: 1px solid rgba(0, 0, 0, 0);
 }
 
-/* Hide the checkbox */
-#toggle-checkbox {
+.not_top {
+    background-color: rgba(0, 0, 0, 0.295);
+    backdrop-filter: blur(18px);
+    transition: .2s ease;
+    border-bottom: 1px solid rgb(32 32 32);
+}
+
+#open_menu {
     display: none;
 }
 
-/* Default styles for the content */
-#content {
-    height: 0;
-    overflow: hidden;
-    transition: height 0.3s ease;
+#navigation ul {
+    margin: 0 .3rem;
 }
 
-/* Styles when the checkbox is checked */
-#toggle-checkbox:checked+label+#content {
-    height: 100px;
-    /* Adjust height as needed */
+#navigation ul li a {
+    color: var(--primary-font-color);
 }
 
-#other_components {
-    display: grid;
-    height: fit-content;
-    width: 100vw;
+#wrapper {
+    margin-top: 10dvh;
 }
 
-#others {
+.section {
+    height: 90dvh;
+    width: 100dvw;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    align-items: center;
+}
+
+#header {
+    flex-direction: column;
+}
+
+#header h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+#header p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+#buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+#features {
+    display: flex;
     flex-wrap: wrap;
 }
 
-#checkboxs{
-    display: grid;
+.feature {
+    width: 20dvw;
+    margin: 1rem;
+    text-wrap: wrap;
+    padding: 2rem;
+    border-radius: .6rem;
+    background-color: transparent;
+    transition: .2s ease;
 }
 
-.inputs label{
-    width: 100%;
+.icon {
+    font-size: 3rem;
+}
+
+.title {
+    font-size: 2rem;
+}
+
+.description {
+    font-size: 1rem;
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.learn_more {
+    margin: 1rem;
+    text-align: right;
+}
+
+#variant_selector {
+    padding: 1rem 2rem;
+    margin: 1rem;
+    border-radius: .6rem;
+    background-color: transparent;
+    color: var(--primary-font-color);
+    border: 1px solid rgb(32, 32, 32);
+    outline: 3px solid transparent;
+    outline-offset: 2px;
+    font-size: .875rem;
+}
+
+#variant_selector:focus {
+    outline: 3px solid white;
+}
+
+option {
+    color: black;
+}
+
+
+/**
+* ? Element FX
+*/
+#page_wrapper::-webkit-scrollbar {
+    display: none;
+}
+
+.feature:hover {
+    box-shadow: black 0 0 5px;
+    transition: .2s ease;
+    background-color: rgb(19, 19, 19);
+}
+
+.learn_more:hover {
+    text-decoration: underline;
+}
+
+/**
+* ? Responsive
+*/
+
+@media screen and (max-width: 680px) {
+    #navigation ul {
+        display: grid;
+        height: 100dvh;
+        width: 70dvw;
+        margin-right: -70dvw;
+        background-color: rgba(0, 0, 0, 0.637);
+        backdrop-filter: blur(24px);
+        justify-content: center;
+        align-content: center;
+        z-index: 5;
+    }
+
+    #open_menu {
+        display: block;
+        font-size: 1rem;
+    }
+
+    #header {
+        height: 90dvh;
+    }
+
+    #header h1 {
+        font-size: 1.5rem;
+    }
+
+    #header p {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .section {
+        height: 100%;
+        flex-direction: row;
+    }
+
+    .feature {
+        width: 90%;
+    }
+
+
+    #live {
+        display: block;
+        padding: 1rem;
+        margin: .2rem .5rem;
+    }
+
+    #button_fields {
+        display: grid;
+    }
+
+    #variant_selector{
+        width: 70%;
+    }
+
+    #live_page {
+        width: calc(100dvw - 3rem);
+    }
 }

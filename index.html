@@ -4,160 +4,130 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./vanbUI/vanbUI.css">
-    <link rel="stylesheet" href="style.css">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/vanbUI/vanbUI.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/gh/CSP02/Toggler/Toggler.min.js"></script>
     <title>vanbUI</title>
 </head>
 
 <body>
-    <script>
-        window.onload = () => {
-            const checkbox = document.querySelector('input[id="checkbox_on"]');
+    <div id="page_wrapper">
+        <nav id="navigation" class="nav">
+            <button id="open_menu" vanb="true" variant="ghost"><i class="fa-solid fa-bars"></i></button>
+            <ul id="menu">
+                <li><button vanb="true" variant="ghost">
+                        <a href="/Components/">Components <i class="fas fa-arrow-up-right-from-square"
+                                target="_blank"></i></a>
+                    </button>
+                </li>
+                <li>
+                    <button vanb="true" variant="ghost">
+                        <a href="http://github.com/CSP02/vanbUI" target="_blank">Open source <i
+                                class="fas fa-arrow-up-right-from-square"></i></a>
+                    </button>
+                </li>
+            </ul>
+        </nav>
+        <div id="wrapper">
+            <div id="header" class="section">
+                <h1>welcome to vanbUI</h1>
+                <p>A library for building beautiful UIs with ease</p>
 
-            checkbox.addEventListener('change', function () {
-                if (checkbox.checked) {
-                    console.log('The checkbox is checked!');
-                } else {
-                    console.log('The checkbox is not checked.');
-                }
-            });
-        }
-    </script>
-    <div id="components">
-        <div id="buttons" class="section">
-            <h1>Buttons:</h1>
-            <div style="display: flex;flex-wrap:wrap;justify-content: space-around;">
-                <div>
-                    <h3>Colored Buttons:</h3>
-                    <button vanb="true" variant="primary">General</button>
-                    <button vanb="true" variant="success">Success</button>
-                    <button vanb="true" variant="error">Error</button>
-                </div>
-                <div>
-                    <h3>Themed Buttons:</h3>
-                    <button vanb="true" variant="black">Black</button>
-                    <button vanb="true" variant="white">White</button>
-                    <button vanb="true" variant="outline">Outline</button>
-                    <button vanb="true" variant="ghost">Ghost</button>
-                    <button vanb="true" variant="loading">Loading</button>
+                <div id="buttons">
+                    <button vanb="true" variant="outline">Open source <i
+                            class="fas fa-arrow-up-right-from-square"></i></button>
+                    <button vanb="true" variant="white">Docs</button>
                 </div>
             </div>
-        </div>
-        <div class="section">
-            <h1>Checkboxes: </h1>
-            <div id="checkboxs">
-                <div class="inputs">
-                    <input type="checkbox" name="checkbox_on" id="checkbox_on" vanb="true" variant="on-off"
-                        checked="true">
-                    <label for="checkbox_on">Checkbox on</label>
+            <div class="section" id="features">
+                <div class="feature">
+                    <div class="icon"><i class="far fa-gem"></i></div>
+                    <h3 class="title">Beautiful design</h3>
+                    <div class="description">
+                        <p>
+                            vanbUI comes with different UI components you can try. Click learn more to see what
+                            components you can use.
+                        </p>
+                        <a href="#customisation" class="learn_more">Learn more <i class="fas fa-chevron-right"></i></a>
+                    </div>
                 </div>
-                <div class="inputs">
-                    <input type="checkbox" name="checkbox_off" id="checkbox_off" vanb="true" variant="on-off">
-                    <label for="checkbox_off">Checkbox off</label>
+                <div class="feature">
+                    <div class="icon"><i class="fa-solid fa-code"></i></div>
+                    <h3 class="title">Different variants</h3>
+                    <div class="description">
+                        <p>
+                            Choose a variant that matches your needs.
+                        </p>
+                        <a href="#customisation" class="learn_more">Learn more <i class="fas fa-chevron-right"></i></a>
+                    </div>
                 </div>
-                <div style="    display: flex;justify-content: center;">
-                    <input type="checkbox" name="general_checkbox" id="general_checkbox" vanb="true" variant="checkbox">
-                    <label for="general_checkbox">General checkbox</label>
+                <div class="feature">
+                    <div class="icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+                    <h3 class="title">Customisable</h3>
+                    <div class="description">
+                        <p>
+                            Style it like you mean it. click learn more to see how you can style the components
+                        </p>
+                        <a href="#customisation" class="learn_more">Learn more <i class="fas fa-chevron-right"></i></a>
+                    </div>
+                </div>
+                <div class="feature">
+                    <div class="icon"><i class="fa-solid fa-mobile-screen"></i></div>
+                    <h3 class="title">Responsive</h3>
+                    <div class="description">
+                        <p>
+                            Developing a webapp for different platforms? worry not vanbUI is responsive.
+                        </p>
+                        <a href="#customisation" class="learn_more">Learn more <i class="fas fa-chevron-right"></i></a>
+                    </div>
+                </div>
+                <div class="feature">
+                    <div class="icon"><i class="fa-solid fa-book"></i></div>
+                    <h3 class="title">Beginner friendly</h3>
+                    <div class="description">
+                        <p>
+                            vanbUI is a simple library where you can just define some attributes and it does the work.
+                        </p>
+                        <a href="#customisation" class="learn_more">Learn more <i class="fas fa-chevron-right"></i></a>
+                    </div>
+                </div>
+                <div class="feature">
+                    <div class="icon"><i class="fa-regular fa-thumbs-up"></i></div>
+                    <h3 class="title">Easy to use</h3>
+                    <div class="description">
+                        <p>
+                            If you find it hard, just copy paste the components.
+                        </p>
+                        <a href="#customisation" class="learn_more">Learn more <i class="fas fa-chevron-right"></i></a>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div id="inputs" class="section">
-            <h1>Input:</h1>
-            <div>
-                <h3>General Inputs:</h3>
-                <label for="general_input">Username:</label>
-                <input type="text" vanb="true" placeholder="username" variant="input" name="general_input"
-                    id="general_input">
-                <label for="password">Password:</label>
-                <input type="password" vanb="true" placeholder="password" variant="input" name="password" id="password">
-                <h3>Inputs with some fx:</h3>
-                <label for="text">Sample text:</label>
-                <div type="text" vanb="true" variant="input" contenteditable="true" placeholder="Placeholder"></div>
-                <label for="text_password">Sample Password:</label>
-                <div type="text" vanb="true" variant="input" contenteditable="true" placeholder="Password"
-                    security="true"></div>
-            </div>
-        </div>
-
-        <div id="other_components" class="section">
-            <h1>Other components:</h1>
-            <div id="others">
-                <div>
-                    <h3>Avatar:</h3>
-                    <img src="https://cdn.discordapp.com/attachments/243005537342586880/1220748415210881034/gradient.png?ex=6610118e&is=65fd9c8e&hm=84f2fdf6261ce6c2c2426879d5aad2700e780073373db12d6b1dca05cf833f7a&"
-                        alt="duckie's pfp" vanb="true" type="avatar_small">
+            <div class="section" id="live">
+                <h1>Check out these button variants: </h1>
+                <div id="button_fields">
+                    <label for="variant_selector">Variant selector</label>
+                    <select name="variant_selector" id="variant_selector">
+                        <option value="primary">Primary</option>
+                        <option value="success">success</option>
+                        <option value="error">Error</option>
+                        <option value="white">white</option>
+                        <option value="black">black</option>
+                        <option value="outline">outline</option>
+                        <option value="ghost">ghost</option>
+                        <option value="loading">loading</option>
+                    </select>
                 </div>
-                <div>
-                    <h3>accordion:</h3>
-                    <accordion>
-                        <input type="checkbox" vanb="true" variant="accordion" name="test" id="test">
-                        <label for="test">Test</label>
-                        <acdescription id="wrapper">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe animi aspernatur sit
-                            excepturi,
-                            aut,
-                            neque voluptates numquam adipisci expedita tempora aliquid, velit necessitatibus. Nulla
-                            exercitationem, reprehenderit illum officia ut quisquam.
-                        </acdescription>
-                    </accordion>
-                </div>
-                <div>
-                    <h3>Alerts:</h3>
-                    <alert variant="terminal" type="info">
-                        <atitle>Alert title!</atitle>
-                        <alertdes>
-                            Hee hoo this is a terminal variant, info type alert
-                        </alertdes>
-                    </alert>
-                    <alert variant="terminal" type="error">
-                        <atitle>Alert title!</atitle>
-                        <alertdes>
-                            Hee hoo this is a terminal variant, error type alert
-                        </alertdes>
-                    </alert>
-                    <alert variant="general" type="info">
-                        <atitle>Alert title!</atitle>
-                        <alertdes>
-                            Hee hoo this is a general variant, info type alert
-                        </alertdes>
-                    </alert>
-                    <alert variant="general" type="error">
-                        <atitle>Alert title!</atitle>
-                        <alertdes>
-                            Hee hoo this is a general variant, error type alert
-                        </alertdes>
-                    </alert>
-                </div>
-                <div>
-                    <h3>Badge:</h3>
-                    <badge>Badge</badge>
-                </div>
-                <!-- TODO: Alerts -->
-                <!-- <h1>Alert dialogs:</h1>
-                <alert variant="dialog">
-                    <button vanb="true" variant="alert">Show dialog</button>
-                    <adialog>
-                        Heehoo this is the dialog!
-                        <dialogbuttons>
-                            <button vanb="true" variant="outline">Close</button>
-                        </dialogbuttons>
-                    </adialog>
-                </alert> -->
+                <iframe src="" frameborder="0" id="live_page"></iframe>
             </div>
         </div>
     </div>
+    <script src="script.js"></script>
 </body>
 
 </html>
