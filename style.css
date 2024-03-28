@@ -154,12 +154,12 @@ ul {
     text-align: right;
 }
 
-#live{
+#live {
     height: 40dvh;
     display: grid;
 }
 
-#buttons_iframe_holder{
+#buttons_iframe_holder {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -257,8 +257,12 @@ option {
         display: grid;
     }
 
-    #variant_selector{
+    #variant_selector {
         width: 70%;
+    }
+
+    #buttons_iframe_holder {
+        display: grid;
     }
 
     #live_page {
