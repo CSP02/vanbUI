@@ -93,7 +93,6 @@ ul {
 }
 
 .section {
-    height: 90dvh;
     width: 100dvw;
     display: flex;
     justify-content: center;
@@ -101,6 +100,7 @@ ul {
 }
 
 #header {
+    height: 90dvh;
     flex-direction: column;
 }
 
@@ -152,6 +152,17 @@ ul {
 .learn_more {
     margin: 1rem;
     text-align: right;
+}
+
+#live{
+    height: 40dvh;
+    display: grid;
+}
+
+#buttons_iframe_holder{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #variant_selector {
@@ -228,7 +239,6 @@ option {
     }
 
     .section {
-        height: 100%;
         flex-direction: row;
     }
 
