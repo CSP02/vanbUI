@@ -253,19 +253,10 @@ option {
         margin: .2rem .5rem;
     }
 
-    #button_fields {
-        display: grid;
-    }
-
-    #variant_selector {
-        width: 70%;
-    }
-
+    #button_fields,
     #buttons_iframe_holder {
-        display: grid;
-    }
-
-    #live_page {
         width: calc(100dvw - 3rem);
+        display: grid;
+        justify-items: center;
     }
 }
