@@ -264,6 +264,7 @@ option {
     #live, #cdn {
         display: block;
         padding: 1rem;
+        width: 90dvw;
         margin: .2rem .5rem;
     }
 
