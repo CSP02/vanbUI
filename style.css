@@ -279,8 +279,9 @@ option {
     }
 
     #cdn button{
-        width: 70dvw;
+        width: 80dvw;
         text-wrap: wrap;
         overflow: hidden;
+        overflow-wrap: break-word;
     }
 }
