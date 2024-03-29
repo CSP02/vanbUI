@@ -63,7 +63,7 @@ ul {
     width: 100dvw;
     display: flex;
     position: fixed;
-    justify-content: flex-end;
+    justify-content: space-between;
     padding: var(--small-pad);
     transition: .2s ease;
     font-size: var(--medium-font);
