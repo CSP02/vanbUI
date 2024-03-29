@@ -191,7 +191,7 @@ option {
     color: black;
 }
 
-#cdn input{
+#cdn button{
     width: 35dvw;
 }
 
@@ -261,16 +261,26 @@ option {
     }
 
 
-    #live {
+    #live, #cdn {
         display: block;
         padding: 1rem;
         margin: .2rem .5rem;
     }
 
     #button_fields,
-    #buttons_iframe_holder {
+    #buttons_iframe_holder, #cdn_inp_but {
         width: calc(100dvw - 3rem);
         display: grid;
         justify-items: center;
+    }
+
+    #cdn{
+        height: auto;
+    }
+
+    #cdn button{
+        width: 70dvw;
+        text-wrap: wrap;
+        overflow: hidden;
     }
 }

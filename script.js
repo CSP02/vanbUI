@@ -35,7 +35,13 @@ window.onload = () => {
         const cdn = cdnInp.innerText
 
         navigator.clipboard.writeText(cdn).then(callback => {
-            console.log("done!")
+            cdnInp.style.border = "1px solid green"
+            document.getElementById("copied").innerText = "Copied"
+            
+            setTimeout(() => {
+                cdnInp.style = ""
+                document.getElementById("copied").innerText = "Click to copy"
+            }, 3000)
         })
     })
 }
