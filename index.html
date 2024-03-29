@@ -19,99 +19,159 @@
 <body>
     <div id="page_wrapper">
         <nav id="navigation" class="nav">
-            <div>
-                <img src="https://raw.githubusercontent.com/CSP02/vanbUI/main/Resources/vanbUI_logo_transparent.png" alt="vanbUI logo" srcset="" height="100%" width="100%">
-            </div>
-            <div>
+            <div id="logo_and_open">
+                <img src="https://raw.githubusercontent.com/CSP02/vanbUI/main/Resources/vanbUI_logo_transparent.png"
+                    alt="vanbUI logo" id="logo">
                 <button id="open_menu" vanb="true" variant="ghost"><i class="fa-solid fa-bars"></i></button>
-                <ul id="menu">
-                    <li>
-                        <button vanb="true" variant="ghost">
-                            <a href="/Components/" target="_blank">Components <i
-                                    class="fas fa-arrow-up-right-from-square"></i></a>
-                        </button>
-                    </li>
-                    <li>
-                        <button vanb="true" variant="ghost">
-                            <a href="http://github.com/CSP02/vanbUI" target="_blank">Open source <i
-                                    class="fas fa-arrow-up-right-from-square"></i></a>
-                        </button>
-                    </li>
-                </ul>
             </div>
+            <ul id="menu">
+                <li>
+                    <button vanb="true" variant="ghost">
+                        <a href="/Components/" target="_blank">Components</a>
+                    </button>
+                </li>
+                <li>
+                    <button vanb="true" variant="ghost">
+                        <a href="http://github.com/CSP02/vanbUI" target="_blank">Examples</a>
+                    </button>
+                </li>
+            </ul>
         </nav>
         <div id="wrapper">
             <div id="header" class="section">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="visual"
+                    viewBox="0 0 1920 1080" width="1920" version="1.1" id="background"
+                    style="position: absolute; opacity: .4;transition: .2s ease;">
+                    <rect x="0" y="0" width="1920" height="1080" fill="transparent" />
+                    <g fill="#ebebeb" id="layer_1">
+                        <circle r="26" cx="372" cy="414" class="first" />
+                        <circle r="2" cx="1780" cy="785" class="second" />
+                        <circle r="9" cx="1101" cy="743" class="third" />
+                        <circle r="9" cx="1023" cy="92" class="third" />
+                        <circle r="6" cx="1211" cy="880" class="first" />
+                        <circle r="3" cx="972" cy="752" class="second" />
+                        <circle r="4" cx="109" cy="594" class="second" />
+                        <circle r="13" cx="636" cy="864" class="third" />
+                        <circle r="23" cx="79" cy="886" class="second" />
+                        <circle r="3" cx="1634" cy="563" class="first" />
+                        <circle r="7" cx="1556" cy="143" class="second" />
+                    </g>
+                    <g fill="#ebebeb" id="layer_2">
+                        <circle r="8" cx="1878" cy="378" class="second" />
+                        <circle r="23" cx="1727" cy="699" class="first" />
+                        <circle r="22" cx="1020" cy="709" class="third" />
+                        <circle r="4" cx="485" cy="41" class="first" />
+                        <circle r="2" cx="370" cy="890" class="second" />
+                        <circle r="9" cx="260" cy="340" class="first" />
+                        <circle r="2" cx="1235" cy="165" class="third" />
+                        <circle r="23" cx="242" cy="1030" class="first" />
+                        <circle r="3" cx="1318" cy="449" class="third" />
+                        <circle r="4" cx="1738" cy="875" class="second" />
+                    </g>
+                    <g fill="#ebebeb" id="layer_3">
+                        <circle r="6" cx="888" cy="824" class="first" />
+                        <circle r="22" cx="1733" cy="443" class="second" />
+                        <circle r="23" cx="1031" cy="793" class="third" />
+                        <circle r="21" cx="830" cy="656" class="second" />
+                        <circle r="20" cx="475" cy="121" class="first" />
+                        <circle r="20" cx="580" cy="312" class="third" />
+                        <circle r="19" cx="1428" cy="938" class="first" />
+                        <circle r="24" cx="1271" cy="965" class="second" />
+                        <circle r="9" cx="1851" cy="882" class="second" />
+                        <circle r="20" cx="1483" cy="978" class="third" />
+                        <circle r="14" cx="394" cy="570" class="first" />
+                    </g>
+                </svg>
                 <h1>welcome to vanbUI</h1>
                 <p>A library for building beautiful UIs with ease</p>
 
                 <div id="buttons">
-                    <button vanb="true" variant="outline"><a href="http://github.com/CSP02/vanbUI" class="quick_link"
-                            target="_blank">Open source <i class="fas fa-arrow-up-right-from-square"></i></a></button>
+                    <button vanb="true" variant="outline" id="quick_link_button"><a
+                            href="http://github.com/CSP02/vanbUI" class="quick_link" target="_blank">GitHub <i
+                                class="fab fa-github"></i></a></button>
                     <button vanb="true" variant="white"><a href="/Docs/" style="color: black;"
-                            target="_blank">Docs</a></button>
+                            target="_blank">Documentation</a></button>
                 </div>
             </div>
             <div class="section" id="features">
                 <div class="feature">
                     <div class="icon"><i class="far fa-gem"></i></div>
-                    <h3 class="title">Beautiful design</h3>
-                    <div class="description">
-                        <p>
-                            vanbUI comes with different UI components you can try. Click learn more to see what
-                            components you can use.
-                        </p>
-                        <a href="#customisation" class="learn_more">Learn more <i class="fas fa-chevron-right"></i></a>
+                    <div class="title_des_holder">
+                        <h3 class="title">Beautiful design</h3>
+                        <div class="description">
+                            <p>
+                                vanbUI comes with different UI components you can try. Click learn more to see what
+                                components you can use.
+                            </p>
+                            <a href="#customisation" class="learn_more">Learn more <i
+                                    class="fas fa-chevron-right"></i></a>
+                        </div>
                     </div>
                 </div>
                 <div class="feature">
                     <div class="icon"><i class="fa-solid fa-code"></i></div>
-                    <h3 class="title">Different variants</h3>
-                    <div class="description">
-                        <p>
-                            Choose a variant that matches your needs.
-                        </p>
-                        <a href="#customisation" class="learn_more">Learn more <i class="fas fa-chevron-right"></i></a>
+                    <div class="title_des_holder">
+                        <h3 class="title">Different variants</h3>
+                        <div class="description">
+                            <p>
+                                Choose a variant that matches your needs.
+                            </p>
+                            <a href="#customisation" class="learn_more">Learn more <i
+                                    class="fas fa-chevron-right"></i></a>
+                        </div>
                     </div>
                 </div>
                 <div class="feature">
                     <div class="icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
-                    <h3 class="title">Customisable</h3>
-                    <div class="description">
-                        <p>
-                            Style it like you mean it. click learn more to see how you can style the components
-                        </p>
-                        <a href="#customisation" class="learn_more">Learn more <i class="fas fa-chevron-right"></i></a>
+                    <div class="title_des_holder">
+                        <h3 class="title">Customisable</h3>
+                        <div class="description">
+                            <p>
+                                Style it like you mean it. click learn more to see how you can style the components
+                            </p>
+                            <a href="#customisation" class="learn_more">Learn more <i
+                                    class="fas fa-chevron-right"></i></a>
+                        </div>
                     </div>
                 </div>
                 <div class="feature">
                     <div class="icon"><i class="fa-solid fa-mobile-screen"></i></div>
-                    <h3 class="title">Responsive</h3>
-                    <div class="description">
-                        <p>
-                            Developing a webapp for different platforms? worry not vanbUI is responsive.
-                        </p>
-                        <a href="#customisation" class="learn_more">Learn more <i class="fas fa-chevron-right"></i></a>
+                    <div class="title_des_holder">
+                        <h3 class="title">Responsive</h3>
+                        <div class="description">
+                            <p>
+                                Developing a webapp for different platforms? worry not vanbUI is responsive.
+                            </p>
+                            <a href="#customisation" class="learn_more">Learn more <i
+                                    class="fas fa-chevron-right"></i></a>
+                        </div>
                     </div>
                 </div>
                 <div class="feature">
                     <div class="icon"><i class="fa-solid fa-book"></i></div>
-                    <h3 class="title">Beginner friendly</h3>
-                    <div class="description">
-                        <p>
-                            vanbUI is a simple library where you can just define some attributes and it does the work.
-                        </p>
-                        <a href="#customisation" class="learn_more">Learn more <i class="fas fa-chevron-right"></i></a>
+                    <div class="title_des_holder">
+                        <h3 class="title">Beginner friendly</h3>
+                        <div class="description">
+                            <p>
+                                vanbUI is a simple library where you can just define some attributes and it does the
+                                work.
+                            </p>
+                            <a href="#customisation" class="learn_more">Learn more <i
+                                    class="fas fa-chevron-right"></i></a>
+                        </div>
                     </div>
                 </div>
                 <div class="feature">
                     <div class="icon"><i class="fa-regular fa-thumbs-up"></i></div>
-                    <h3 class="title">Easy to use</h3>
-                    <div class="description">
-                        <p>
-                            If you find it hard, just copy paste the components.
-                        </p>
-                        <a href="#customisation" class="learn_more">Learn more <i class="fas fa-chevron-right"></i></a>
+                    <div class="title_des_holder">
+                        <h3 class="title">Easy to use</h3>
+                        <div class="description">
+                            <p>
+                                If you find it hard, just copy paste the components.
+                            </p>
+                            <a href="#customisation" class="learn_more">Learn more <i
+                                    class="fas fa-chevron-right"></i></a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -148,7 +208,36 @@
                 </div>
             </div>
         </div>
-    </div>
+        <footer>
+            <div style="display: flex;align-items: flex-start;">
+                <div class="footer_links">
+                    <h3>Getting started</h3>
+                    <ul>
+                        <li><a href="#">Examples</a></li>
+                        <li><a href="#">Components</a></li>
+                        <li><a href="#">Download</a></li>
+                    </ul>
+                </div>
+                <div class="footer_links">
+                    <h3>Community</h3>
+                    <ul>
+                        <li><a href="#">Discord</a></li>
+                        <li><a href="#">GitHub</a></li>
+                        <li><a href="#">Change logs</a></li>
+                    </ul>
+                </div>
+                <div class="footer_links">
+                    <h3>Help</h3>
+                    <ul>
+                        <li><a href="#">Documentation</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer_links">
+                <img src="https://raw.githubusercontent.com/CSP02/vanbUI/main/Resources/vanbUI_logo_transparent.png"
+                    alt="">
+            </div>
+        </footer>
     </div>
     <script src="script.js"></script>
 </body>

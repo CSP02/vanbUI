@@ -18,6 +18,7 @@
 * {
     margin: 0;
     padding: 0;
+    z-index: 1;
 }
 
 body {
@@ -41,11 +42,64 @@ ul {
     align-items: center;
 }
 
+footer {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    padding: 2rem;
+    margin: .5rem 0 0 0;
+    background-color: rgb(22, 22, 22);
+}
+
+svg {
+    z-index: -1;
+    height: 100%;
+}
+
+#logo {
+    width: 160px;
+}
+
+.quick_link:hover {
+    opacity: 1;
+}
+
+#background {
+    height: 100vh;
+    width: 100vw;
+    object-fit: cover;
+    z-index: -1;
+    transform: translateZ(-20px) scale(3);
+}
+
+#header {
+    z-index: 1;
+    transform: translateZ(-10px) scale(1);
+}
+
+.first,
+.second,
+.third {
+    transition: 15s linear;
+}
+
+#layer_1 {
+    perspective: 1;
+}
+
+#layer_2 {
+    perspective: 2;
+}
+
+#layer_3 {
+    perspective: 3;
+}
+
 .fas {
     font-size: 9pt;
 }
 
-.quick_link{
+.quick_link {
     color: var(--primary-font-color);
 }
 
@@ -56,6 +110,7 @@ ul {
     position: relative;
     height: 100dvh;
     overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 #navigation {
@@ -63,6 +118,7 @@ ul {
     width: 100dvw;
     display: flex;
     position: fixed;
+    align-items: center;
     justify-content: space-between;
     padding: var(--small-pad);
     transition: .2s ease;
@@ -131,7 +187,7 @@ ul {
 }
 
 .feature {
-    width: 20dvw;
+    width: 25dvw;
     margin: 1rem;
     text-wrap: wrap;
     padding: 2rem;
@@ -145,14 +201,23 @@ ul {
 }
 
 .title {
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 
 .description {
     font-size: 1rem;
     display: flex;
+    line-height: 1.7rem;
     flex-direction: column;
     justify-content: space-between;
+}
+
+.title {
+    line-height: 1.8rem;
+}
+
+.title_des_holder {
+    margin: 1.8rem;
 }
 
 .learn_more {
@@ -160,15 +225,26 @@ ul {
     text-align: right;
 }
 
-#live, #cdn {
-    height: 40dvh;
+#live,
+#cdn {
+    height: 100%;
+    align-content: center;
     display: grid;
 }
 
-#buttons_iframe_holder, #cdn_inp_but {
+#buttons_iframe_holder,
+#cdn_inp_but {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+#quick_link_button {
+    backdrop-filter: blur(24px);
+}
+
+#quick_link_button:hover {
+    opacity: 1;
 }
 
 #variant_selector {
@@ -191,7 +267,7 @@ option {
     color: black;
 }
 
-#cdn button{
+#cdn button {
     width: fit-content;
 }
 
@@ -205,16 +281,48 @@ option {
 .feature:hover {
     box-shadow: black 0 0 5px;
     transition: .2s ease;
-    background-color: rgb(19, 19, 19);
+    background-color: rgb(36, 36, 36);
+}
+
+.icon {
+    position: absolute;
+    opacity: .1;
+    font-size: 5rem;
 }
 
 .learn_more:hover {
     text-decoration: underline;
 }
 
-#tooltip_wrapper{
+#tooltip_wrapper {
     position: relative;
     height: auto;
+}
+
+.footer_links,
+.footer_links ul {
+    display: grid;
+}
+
+.footer_links {
+    padding: .3rem .5rem;
+}
+
+.footer_links ul li {
+    padding: .3rem;
+}
+
+.footer_links h3 {
+    padding: .5rem .3rem;
+    color: rgb(99, 99, 99);
+}
+
+.footer_links a {
+    color: rgb(199, 199, 199);
+}
+
+.footer_links a:hover {
+    color: white;
 }
 
 /**
@@ -222,16 +330,31 @@ option {
 */
 
 @media screen and (max-width: 680px) {
+    #logo {
+        display: none;
+    }
+
+    #open_menu {
+        z-index: 10;
+    }
+
+    #navigation {
+        align-items: flex-start;
+        margin-top: 0;
+        z-index: 6;
+    }
+
     #navigation ul {
         display: grid;
-        height: 100dvh;
+        height: 95dvh;
+        border-top-left-radius: 45px;
+        border-bottom-left-radius: 45px;
         width: 70dvw;
         margin-right: -70dvw;
-        background-color: rgba(0, 0, 0, 0.637);
-        backdrop-filter: blur(24px);
+        background-color: rgb(22, 22, 22);
         justify-content: center;
         align-content: center;
-        z-index: 5;
+        z-index: -1;
     }
 
     #open_menu {
@@ -261,7 +384,8 @@ option {
     }
 
 
-    #live, #cdn {
+    #live,
+    #cdn {
         display: block;
         padding: 1rem;
         width: 90dvw;
@@ -269,17 +393,18 @@ option {
     }
 
     #button_fields,
-    #buttons_iframe_holder, #cdn_inp_but {
+    #buttons_iframe_holder,
+    #cdn_inp_but {
         width: calc(100dvw - 3rem);
         display: grid;
         justify-items: center;
     }
 
-    #cdn{
+    #cdn {
         height: auto;
     }
 
-    #cdn button{
+    #cdn button {
         width: 80dvw;
         text-wrap: wrap;
         overflow: hidden;
