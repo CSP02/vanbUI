@@ -192,7 +192,7 @@ option {
 }
 
 #cdn button{
-    width: 35dvw;
+    width: fit-content;
 }
 
 /**
