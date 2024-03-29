@@ -45,10 +45,15 @@ ul {
     font-size: 9pt;
 }
 
+.quick_link{
+    color: var(--primary-font-color);
+}
+
 /**
 * ? Elements
 */
 #page_wrapper {
+    position: relative;
     height: 100dvh;
     overflow-y: scroll;
 }
@@ -62,6 +67,7 @@ ul {
     padding: var(--small-pad);
     transition: .2s ease;
     font-size: var(--medium-font);
+    z-index: 5;
 }
 
 .nav {
@@ -154,12 +160,12 @@ ul {
     text-align: right;
 }
 
-#live {
+#live, #cdn {
     height: 40dvh;
     display: grid;
 }
 
-#buttons_iframe_holder {
+#buttons_iframe_holder, #cdn_inp_but {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -185,6 +191,9 @@ option {
     color: black;
 }
 
+#cdn input{
+    width: 35dvw;
+}
 
 /**
 * ? Element FX
@@ -201,6 +210,11 @@ option {
 
 .learn_more:hover {
     text-decoration: underline;
+}
+
+#tooltip_wrapper{
+    position: relative;
+    height: auto;
 }
 
 /**

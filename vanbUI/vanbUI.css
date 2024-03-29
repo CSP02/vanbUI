@@ -1,3 +1,7 @@
+* {
+    position: relative;
+}
+
 *[vanb="true"] {
     transition: .2s ease;
     font-weight: 500;
@@ -362,6 +366,44 @@ alertdes {
     margin-left: calc(1.4rem + 12pt);
 }
 
+tooltip[hang="bottom"],
+tooltip[hang="top"] {
+    position: absolute;
+    background-color: #f4f4f4;
+    color: black;
+    font-size: .875rem;
+    height: 0;
+    overflow-y: auto;
+    text-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0rem 1rem;
+    width: fit-content;
+    transition: .2s ease;
+    border-radius: .6rem;
+}
+
+tooltip{
+    left: calc(50% - 2.65rem);
+}
+
+tooltip[hang="top"] {
+    top: 0;
+    transform: translateY(-100%);
+}
+
+*[tooltip="true"]:hover+tooltip {
+    opacity: 1;
+    padding: .5rem 1rem;
+    transition: .2s ease;
+    height: 1rem;
+}
+
+tooltip:hover {
+    background-color: #f4f4f4;
+}
+
 /**
 * ? FX
 */
@@ -403,6 +445,10 @@ input[vanb="true"][type="checkbox"][variant="on-off"]+label:hover {
     cursor: pointer;
 }
 
+input[vanb="true"]:disabled{
+    opacity: .5;
+}
+
 /* TODO: responsiveness for different viewports */
 
 /**
@@ -412,4 +458,11 @@ input[vanb="true"][type="checkbox"][variant="on-off"]+label:hover {
     100% {
         transform: rotate(1turn);
     }
+}
+
+/**
+* ? Scrollbars and stuff
+*/
+tooltip::-webkit-scrollbar {
+    display: none;
 }

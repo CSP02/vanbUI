@@ -12,12 +12,14 @@ window.onload = () => {
 
     const variantSelector = document.getElementById("variant_selector")
     const button = document.getElementById("live_example")
+    const tooltip = document.getElementById("button_tooltip")
 
     variantSelector.addEventListener("change", event => {
         const variant = variantSelector.value
 
         button.setAttribute("variant", variant)
         button.innerText = variant
+        tooltip.innerText = variant
     })
 
     const openMenu = document.getElementById("open_menu")
@@ -26,5 +28,14 @@ window.onload = () => {
         const toggler = new Toggler
         openMenu.getElementsByTagName("i")[0].classList.toggle("fa-xmark")
         toggler.toggleSlide("menu", "right", .2)
+    })
+
+    const cdnInp = document.getElementById("cdn_inp")
+    cdnInp.addEventListener("click", () => {
+        const cdn = cdnInp.innerText
+
+        navigator.clipboard.writeText(cdn).then(callback => {
+            console.log("done!")
+        })
     })
 }
