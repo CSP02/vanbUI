@@ -47,8 +47,9 @@ footer {
     align-items: flex-start;
     justify-content: space-around;
     padding: 2rem;
-    margin: .5rem 0 0 0;
+    margin: 2rem 0 0 0;
     background-color: rgb(22, 22, 22);
+    flex-wrap: wrap;
 }
 
 svg {
@@ -332,6 +333,10 @@ option {
 @media screen and (max-width: 680px) {
     #logo {
         display: none;
+    }
+
+    #header p {
+        padding: 0 1rem;
     }
 
     #open_menu {
