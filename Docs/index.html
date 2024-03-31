@@ -26,7 +26,8 @@
             </div>
             <ul id="menu">
                 <li>
-                    <a href="https//github.com/CSP02/Docs/index.html#components" target="_blank" class="nav_links">Components</a>
+                    <a href="https//github.com/CSP02/Docs/index.html#components" target="_blank"
+                        class="nav_links">Components</a>
                 </li>
                 <li>
                     <a href="https://github.com/CSP02/vanbUI" target="_blank" class="nav_links">Examples</a>
@@ -46,87 +47,121 @@
                     <li><a href="#" class="inactive page_link">Tooltip</a></li>
                 </ul>
             </div>
-            <div id="docs_wrapper">
-                <div id="page_1" class="page">
-                    <h3>
-                        Introduction:
-                    </h3>
-                    <div class="section">
-                        <p>
-                            vanbUI is a UI library for vanilla. This project is made to give nice UIs (ex: <a
-                                href="https://ui.shadcn.com">shadcn</a>) for vanilla (vanilla HTML, CSS and JS)
-                        </p>
+            <div id="pages_and_but">
+                <div id="docs_wrapper">
+                    <div id="page_1" class="page active_page">
+                        <h3>
+                            Introduction:
+                        </h3>
+                        <div class="section">
+                            <h4>What is vanbUI?</h4>
+                            <p>
+                                vanbUI is a UI library for vanilla. This project is made to give nice UIs (ex: <a
+                                    href="https://ui.shadcn.com">shadcn</a>) for vanilla (vanilla HTML, CSS and JS)
+                            </p>
+                            <h4>How to use:</h4>
+                            <p>
+                                Using vanbUI is pretty easy. All you have to do is define an attribute
+                                <code>vanb="true"</code> and some other attributes like <code>variant</code>,
+                                <code>type</code>, etc.
+                            </p>
+                            <p>
+                                You can also copy paste the components right from this docs.
+                                But first you need to add vanbUI css for your page. So use this cdn below to add it to
+                                your
+                                webpage.
+                            </p>
+                            <p>
+                                And vanbUI uses font awesome for icons so you need to include font awesome as well. As
+                                for
+                                the fonts.... well it's upto you.
+                            </p>
+                            <h4>vanbUI cdn:</h4>
+                            <div id="cdn_inp_but">
+                                <button id="cdn_inp" vanb="true" tooltip="true" variant="outline">
+                                    <code style="background-color: transparent;padding: 0;">&lt;link href="https://cdn.jsdelivr.net/gh/CSP02/vanbUI@latest/vanbUI/vanbUI.css"
+                                    rel="stylesheet"&gt;</code>
+                                </button>
+                                <tooltip hang="top" id="copied">Click to copy</tooltip>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="page_2" class="page inactive_page">
+                        <h3>
+                            Button:
+                        </h3>
+                        <div class="section">
+                            <p>
+                                Button go brrrrr
+                            </p>
+                        </div>
+                    </div>
+                    <div id="page_3" class="page inactive_page">
+                        <h3>
+                            Checkbox:
+                        </h3>
+                        <div class="section">
+                            <p>
+                                Checkbox go brrrrr
+                            </p>
+                        </div>
+                    </div>
+                    <div id="page_4" class="page inactive_page">
+                        <h3>
+                            Input:
+                        </h3>
+                        <div class="section">
+                            <p>
+                                Input go brrrrr
+                            </p>
+                        </div>
+                    </div>
+                    <div id="page_5" class="page inactive_page">
+                        <h3>
+                            Avatar:
+                        </h3>
+                        <div class="section">
+                            <p>
+                                Avatar go brrrrr
+                            </p>
+                        </div>
+                    </div>
+                    <div id="page_6" class="page inactive_page">
+                        <h3>
+                            Accordion:
+                        </h3>
+                        <div class="section">
+                            <p>
+                                Accordion go brrrrr
+                            </p>
+                        </div>
+                    </div>
+                    <div id="page_7" class="page inactive_page">
+                        <h3>
+                            Alert:
+                        </h3>
+                        <div class="section">
+                            <p>
+                                Alert go brrrrr
+                            </p>
+                        </div>
+                    </div>
+                    <div id="page_8" class="page inactive_page">
+                        <h3>
+                            Tooltip:
+                        </h3>
+                        <div class="section">
+                            <p>
+                                Tooltip go brrrrr
+                            </p>
+                        </div>
                     </div>
                 </div>
-                <div id="page_2" class="page">
-                    <h3>
-                        Button:
-                    </h3>
-                    <div class="section">
-                        <p>
-                            Button go brrrrr
-                        </p>
-                    </div>
-                </div>
-                <div id="page_3" class="page">
-                    <h3>
-                        Checkbox:
-                    </h3>
-                    <div class="section">
-                        <p>
-                            Checkbox go brrrrr
-                        </p>
-                    </div>
-                </div>
-                <div id="page_4" class="page">
-                    <h3>
-                        Input:
-                    </h3>
-                    <div class="section">
-                        <p>
-                            Input go brrrrr
-                        </p>
-                    </div>
-                </div>
-                <div id="page_5" class="page">
-                    <h3>
-                        Avatar:
-                    </h3>
-                    <div class="section">
-                        <p>
-                            Avatar go brrrrr
-                        </p>
-                    </div>
-                </div>
-                <div id="page_6" class="page">
-                    <h3>
-                        Accordion:
-                    </h3>
-                    <div class="section">
-                        <p>
-                            Accordion go brrrrr
-                        </p>
-                    </div>
-                </div>
-                <div id="page_7" class="page">
-                    <h3>
-                        Alert:
-                    </h3>
-                    <div class="section">
-                        <p>
-                            Alert go brrrrr
-                        </p>
-                    </div>
-                </div>
-                <div id="page_8" class="page">
-                    <h3>
-                        Tooltip:
-                    </h3>
-                    <div class="section">
-                        <p>
-                            Tooltip go brrrrr
-                        </p>
-                    </div>
+                <div id="pagination_buttons">
+                    <button vanb="true" id="back_button" variant="outline" disabled><i
+                            class="fa-solid fa-angle-left"></i> Back</button>
+                    <button vanb="true" id="next_button" variant="white">Next <i
+                            class="fa-solid fa-angle-right"></i></button>
                 </div>
             </div>
         </div>
@@ -156,7 +191,8 @@
                 </div>
             </div>
             <div class="footer_links">
-                <img src="https://raw.githubusercontent.com/CSP02/vanbUI/main/Resources/vanbUI_logo_transparent.png" alt="">
+                <img src="https://raw.githubusercontent.com/CSP02/vanbUI/main/Resources/vanbUI_logo_transparent.png"
+                    alt="">
             </div>
         </footer>
     </div>

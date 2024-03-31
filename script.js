@@ -65,7 +65,7 @@ window.onload = () => {
         const cdn = cdnInp.innerText
 
         navigator.clipboard.writeText(cdn).then(callback => {
-            cdnInp.style.border = "1px solid green"
+            cdnInp.style.outline = "1px solid green"
             document.getElementById("copied").innerText = "Copied"
 
             setTimeout(() => {

@@ -370,6 +370,7 @@ option {
         justify-content: center;
         align-content: center;
         z-index: -1;
+        padding: 0;
     }
 
     #open_menu {
@@ -424,5 +425,9 @@ option {
         text-wrap: wrap;
         overflow: hidden;
         overflow-wrap: break-word;
+    }
+
+    footer img{
+        width: 100%;
     }
 }

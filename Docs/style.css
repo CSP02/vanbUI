@@ -57,6 +57,15 @@ svg {
     height: 100%;
 }
 
+button:disabled {
+    opacity: .3;
+}
+
+button:disabled:hover {
+    opacity: .3;
+    cursor: not-allowed;
+}
+
 .nav_links {
     font-size: .875rem;
     padding: .7rem;
@@ -134,11 +143,23 @@ svg {
 
 .section {
     width: auto;
+    padding: .5rem;
+}
+
+.section h4,
+.section p {
+    padding: .5rem;
 }
 
 #wrapper {
     display: flex;
     height: 90dvh;
+}
+
+code {
+    background-color: rgb(29, 29, 29);
+    border-radius: .3rem;
+    padding: .3rem;
 }
 
 #sidebar {
@@ -170,14 +191,19 @@ svg {
     padding: 1rem;
     width: 100%;
     line-height: 1.5rem;
-    height: 85dvh;
+    height: inherit;
+}
+
+#pages_and_but {
+    width: 65dvw;
+    height: 90dvh;
     overflow-y: auto;
     overflow-x: hidden;
-    overflow-wrap: wrap;
 }
 
 .page {
-    width: 99%;
+    width: 60dvw;
+    height: 100dvh;
     position: absolute;
     background-color: var(--primary-color);
     z-index: -1;
@@ -186,6 +212,17 @@ svg {
 
 #page_1 {
     z-index: 0;
+}
+
+#pagination_buttons {
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem;
+    padding: 1rem;
+}
+
+#cdn_inp_but{
+    padding: .2rem;
 }
 
 /**
@@ -265,10 +302,15 @@ svg {
         justify-content: center;
         align-content: center;
         z-index: -1;
+        padding: 0;
     }
 
     #open_menu {
         display: block;
         font-size: 1rem;
+    }
+
+    footer img {
+        width: 100%;
     }
 }
