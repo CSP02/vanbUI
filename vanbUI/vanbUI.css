@@ -373,7 +373,6 @@ tooltip[hang="top"] {
     color: black;
     font-size: .875rem;
     height: 0;
-    overflow-y: auto;
     text-wrap: wrap;
     display: flex;
     justify-content: center;
@@ -390,7 +389,7 @@ tooltip{
 
 tooltip[hang="top"] {
     top: 0;
-    transform: translateY(-100%);
+    transform: translateY(-110%);
 }
 
 *[tooltip="true"]:hover+tooltip {
@@ -398,6 +397,35 @@ tooltip[hang="top"] {
     padding: .5rem 1rem;
     transition: .2s ease;
     height: 1rem;
+}
+
+*[tooltip="true"]:hover+tooltip::after, *[tooltip="true"]:hover+tooltip::before {
+    transform: rotate(45deg);
+    transition: .2s ease;
+}
+
+tooltip[hang="top"]::after{
+    position: absolute;
+    content: "";
+    height: 14px;
+    width: 14px;
+    border-bottom-right-radius: .2rem;
+    background-color: #f4f4f4;
+    bottom: -7px;
+    transform: rotateX(90deg);
+    transition: .2s ease;
+}
+
+tooltip[hang="bottom"]::before{
+    position: absolute;
+    content: "";
+    height: 14px;
+    width: 14px;
+    border-top-left-radius: .2rem;
+    background-color: #f4f4f4;
+    transform: rotateX(90deg);
+    top: -7px;
+    transition: .2s ease;
 }
 
 tooltip:hover {
