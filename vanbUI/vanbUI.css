@@ -370,7 +370,7 @@ tooltip[hang="bottom"],
 tooltip[hang="top"] {
     position: absolute;
     background-color: #f4f4f4;
-    color: black;
+    color: transparent;
     font-size: .875rem;
     height: 0;
     text-wrap: wrap;
@@ -397,6 +397,7 @@ tooltip[hang="top"] {
     padding: .5rem 1rem;
     transition: .2s ease;
     height: 1rem;
+    color: black;
 }
 
 *[tooltip="true"]:hover+tooltip::after, *[tooltip="true"]:hover+tooltip::before {

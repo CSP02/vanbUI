@@ -75,7 +75,7 @@ button:disabled:hover {
     width: 64px;
 }
 
-#footer_logo{
+#footer_logo {
     width: 150px;
 }
 
@@ -195,7 +195,7 @@ code {
     padding: 1rem;
     width: 100%;
     line-height: 1.5rem;
-    height: inherit;
+    height: 60dvh;
 }
 
 #pages_and_but {
@@ -207,8 +207,9 @@ code {
 
 .page {
     width: 60dvw;
-    height: 100dvh;
+    height: 65dvh;
     position: absolute;
+    overflow-y: auto;
     background-color: var(--primary-color);
     z-index: -1;
     padding-right: .3rem;
@@ -222,13 +223,89 @@ code {
     display: flex;
     justify-content: space-between;
     margin: 1rem;
+    background-color: #0f0f0f;
     padding: 1rem;
+    margin-top: 2rem;
 }
 
-#cdn_inp_but{
+#cdn_inp_but {
     padding: .2rem;
 }
 
+.code_holder {
+    width: fit-content;
+}
+
+#cdn_inp {
+    text-align: left;
+}
+
+.note,
+.danger,
+.info {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: var(--basic-pad);
+    margin: var(--small-pad);
+    background-color: #ffa5005e;
+    border-radius: .3rem;
+    border-left: 4px solid #ffff007d;
+}
+
+.note p,
+.danger p,
+.info p {
+    padding: 0 auto;
+}
+
+.note .fa-triangle-exclamation,
+.danger .fa-triangle-exclamation,
+.info .fa-triangle-exclamation {
+    font-size: 24pt;
+    margin: .3rem;
+    padding: .3rem;
+}
+
+.danger {
+    background-color: #ff71715e;
+    border-left: 4px solid #ff00007d;
+}
+
+.info {
+    background-color: #8b71ff5e;
+    border-left: 4px solid #0011ff7d;
+}
+
+table,
+th,
+td {
+    padding: .3rem;
+    margin: .3rem;
+    text-align: center;
+}
+
+table {
+    border: 2px solid rgba(230, 230, 230, 0.588);
+    border-radius: .3rem;
+}
+
+th{
+    border-bottom: 2px solid rgba(230, 230, 230, 0.588);
+}
+
+tr{
+    border-top: 2px solid rgba(230, 230, 230, 0.588);
+}
+
+.first, .middle{
+    border-right:  2px solid rgba(230, 230, 230, 0.588);
+}
+
+#github_changelogs{
+    margin: 1rem;
+    padding: 1rem;
+}
 /**
 * ? Element FX
 */

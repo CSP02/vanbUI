@@ -36,18 +36,22 @@ window.onload = () => {
         })
     });
 
-    const cdnInp = document.getElementById("cdn_inp")
-    cdnInp.addEventListener("click", () => {
-        const cdn = cdnInp.innerText
+    const codes = document.getElementsByClassName("codes");
+    [...codes].forEach(code => {
+        code.addEventListener("click", () => {
+            const cdn = code.innerText
 
-        navigator.clipboard.writeText(cdn).then(callback => {
-            cdnInp.style.outline = "1px solid green"
-            document.getElementById("copied").innerText = "Copied"
+            navigator.clipboard.writeText(cdn).then(callback => {
+                code.style.outline = "1px solid green"
+                if (code.nextSibling.nextSibling)
+                    code.nextSibling.nextSibling.innerText = "Copied"
 
-            setTimeout(() => {
-                cdnInp.style = ""
-                document.getElementById("copied").innerText = "Click to copy"
-            }, 3000)
+                setTimeout(() => {
+                    code.style = ""
+                    if (code.nextSibling.nextSibling)
+                        code.nextSibling.nextSibling.innerText = "Click to copy"
+                }, 3000)
+            })
         })
     })
 
