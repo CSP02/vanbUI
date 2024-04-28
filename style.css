@@ -63,8 +63,12 @@ svg {
     padding: .7rem;
 }
 
-#logo {
-    width: 160px;
+.vanbUI_icon {
+    width: 64px;
+}
+
+#footer_logo{
+    width: 150px;
 }
 
 .quick_link:hover {
