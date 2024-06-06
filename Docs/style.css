@@ -234,10 +234,21 @@ code {
 
 .code_holder {
     width: fit-content;
+    width: 100%;
 }
 
 #cdn_inp {
     text-align: left;
+    width: 100%;
+}
+
+.codes{
+    text-align: left;
+}
+
+.codes code{
+    padding: 0;
+    line-height: 1.2;
 }
 
 .note,
@@ -277,6 +288,30 @@ code {
     border-left: 4px solid #0011ff7d;
 }
 
+.danger::before, .info::before, .note::before{
+    content: "\f071";
+    font: var(--fa-font-solid);
+    font-size: 32pt;
+    margin: .5rem;
+    padding: .5rem;
+}
+
+.danger::before{
+    content: "\f071";
+}
+
+.info::before{
+    content: "\f05a";
+}
+
+.note::before{
+    content: "\f02d";
+}
+
+#variants div{
+    margin: .5rem;
+}
+
 table,
 th,
 td {
@@ -290,22 +325,24 @@ table {
     border-radius: .3rem;
 }
 
-th{
+th {
     border-bottom: 2px solid rgba(230, 230, 230, 0.588);
 }
 
-tr{
+tr {
     border-top: 2px solid rgba(230, 230, 230, 0.588);
 }
 
-.first, .middle{
-    border-right:  2px solid rgba(230, 230, 230, 0.588);
+.first,
+.middle {
+    border-right: 2px solid rgba(230, 230, 230, 0.588);
 }
 
-#github_changelogs{
+#github_changelogs {
     margin: 1rem;
     padding: 1rem;
 }
+
 /**
 * ? Element FX
 */

@@ -80,12 +80,12 @@ button[vanb="true"][variant="error"] {
     background-color: #CE3838;
 }
 
-input[vanb="true"][type="checkbox"][variant="on-off"] {
+input[vanb="true"][type="checkbox"][variant="switch"] {
     display: none;
     font: var(--fa-font-solid);
 }
 
-input[vanb="true"][type="checkbox"][variant="on-off"]+label::after {
+input[vanb="true"][type="checkbox"][variant="switch"]+label::after {
     font: var(--fa-font-solid);
     color: white;
     font-size: 18pt;
@@ -100,9 +100,19 @@ input[vanb="true"][type="checkbox"][variant="on-off"]+label::after {
     margin: .3rem;
     padding: .3rem;
 }
+input[vanb="true"][type="checkbox"][variant="switch"]+label{
+    display: flex;
+    width: fit-content;
+    align-items: center;
+}
 
 input[vanb="true"][type="checkbox"][variant="checkbox"] {
     display: none;
+}
+
+input[vanb="true"][type="checkbox"][variant="checkbox"]+label {
+    display: flex;
+    align-items: center;
 }
 
 input[vanb="true"][type="checkbox"][variant="checkbox"]+label::before {
@@ -151,21 +161,23 @@ div[vanb="true"][type="text"][variant="input"][contenteditable="true"]::before {
     position: absolute;
     transition: .2s ease-in-out;
     color: white;
-    transform: translateY(-22px);
-    background: linear-gradient(transparent .2rem .4rem, #000000 .4rem .5rem, transparent .5rem 100%);
+    background: linear-gradient(transparent 0 33%, #0f0f0f 33% 55%, transparent 55% 100%);
     margin: 0;
+    margin-top: -1.5rem;
     font-size: 10pt;
     padding: 0 0.2rem;
     opacity: 1;
 }
 
 div[vanb="true"][type="text"][variant="input"][contenteditable="true"]:empty::before {
-    transform: translateY(0px);
     background: none;
     font-size: 16pt;
     padding: .25rem 0 0 0;
+    margin: 0;
     margin-top: -.3rem;
     opacity: .3;
+    color: white;
+    transition: .2s ease;
 }
 
 div[vanb="true"][type="text"][variant="input"][contenteditable="true"]:focus::before {
@@ -173,11 +185,16 @@ div[vanb="true"][type="text"][variant="input"][contenteditable="true"]:focus::be
     position: absolute;
     transition: .2s ease-in-out;
     color: white;
-    margin-top: -1.2rem;
-    background: linear-gradient(transparent .2rem .4rem, #000000 .4rem .5rem, transparent .5rem 100%);
+    margin-top: -1.5rem;
+    background: linear-gradient(transparent 0% 33%, #0f0f0f 33% 55%, transparent 55% 100%);
     font-size: 10pt;
     padding: 0 0.2rem;
     opacity: 1;
+}
+
+div[vanb="true"][type="text"][variant="input"][contenteditable="true"]:focus:empty::before {
+    background: linear-gradient(transparent 0 33%, #0f0f0f 33% 55%, transparent 55% 100%);
+    margin-top: -1.5rem;
 }
 
 div[vanb="true"][security="true"] {
@@ -211,7 +228,7 @@ input[vanb=true][type="password"][variant="input"]:focus {
     outline-offset: 2px;
 }
 
-input[vanb="true"][type="checkbox"][variant="on-off"]:checked+label::after {
+input[vanb="true"][type="checkbox"][variant="switch"]:checked+label::after {
     justify-content: flex-end;
     transition: .2s ease;
     background-color: #34B132;
@@ -470,7 +487,7 @@ button[vanb="true"][variant="loading"]:hover {
     cursor: default;
 }
 
-input[vanb="true"][type="checkbox"][variant="on-off"]+label:hover {
+input[vanb="true"][type="checkbox"][variant="switch"]+label:hover {
     cursor: pointer;
 }
 

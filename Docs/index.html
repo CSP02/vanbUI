@@ -1,298 +1,510 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../vanbUI/vanbUI.css">
-    <link rel="stylesheet" href="./style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../vanbUI/vanbUI.css" />
+    <link rel="stylesheet" href="./style.css" />
     <script src="https://cdn.jsdelivr.net/gh/CSP02/Toggler/Toggler.min.js"></script>
     <title>vanbUI-Documentation</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <div id="page_wrapper">
-        <nav id="navigation" class="nav">
-            <div id="logo_and_open">
-                <img src="https://raw.githubusercontent.com/CSP02/vanbUI/main/Resources/vanbUI_logo.png"
-                    alt="vanbUI logo" id="logo" class="vanbUI_icon" id="footer_logo">
-                <button id="open_menu" vanb="true" variant="ghost"><i class="fa-solid fa-bars"></i></button>
-            </div>
-            <ul id="menu">
-                <li>
-                    <a href="https//github.com/CSP02/Docs/index.html#components" target="_blank"
-                        class="nav_links">Components</a>
-                </li>
-                <li>
-                    <a href="https://github.com/CSP02/vanbUI" target="_blank" class="nav_links">Examples</a>
-                </li>
-            </ul>
-        </nav>
-        <div id="wrapper">
-            <div id="sidebar">
-                <ul>
-                    <li><a href="#" class="active page_link">Introduction</a></li>
-                    <li><a href="#" class="inactive page_link">Button</a></li>
-                    <li><a href="#" class="inactive page_link">Checkbox</a></li>
-                    <li><a href="#" class="inactive page_link">Input</a></li>
-                    <li><a href="#" class="inactive page_link">Avatar</a></li>
-                    <li><a href="#" class="inactive page_link">Accordion</a></li>
-                    <li><a href="#" class="inactive page_link">Alert</a></li>
-                    <li><a href="#" class="inactive page_link">Tooltip</a></li>
-                </ul>
-            </div>
-            <div id="pages_and_but">
-                <div id="docs_wrapper">
-                    <div id="page_1" class="page active_page">
-                        <h3>
-                            Introduction:
-                        </h3>
-                        <div class="section">
-                            <h4>What is vanbUI?</h4>
-                            <p>
-                                vanbUI is a UI library for vanilla. This project is made to give nice UIs (ex: <a
-                                    href="https://ui.shadcn.com">shadcn</a>) for vanilla (vanilla HTML, CSS and JS)
-                            </p>
-                            <h4>How to use:</h4>
-                            <p>
-                                Using vanbUI is pretty easy. All you have to do is define an attribute
-                                <code>vanb="true"</code> and some other attributes like <code>variant</code>,
-                                <code>type</code>, etc.
-                            </p>
-                            <p>
-                                You can also copy paste the components right from this docs.
-                                But first you need to add vanbUI css for your page. So use this cdn below to add it to
-                                your
-                                webpage.
-                            </p>
-                            <p>
-                                And vanbUI uses font awesome for icons so you need to include font awesome as well. As
-                                for
-                                the fonts.... well it's upto you.
-                            </p>
-                            <h4>vanbUI cdn:</h4>
-                            <div id="cdn_inp_but" class="code_holder">
-                                <button id="cdn_inp" vanb="true" tooltip="true" variant="outline" class="codes">
-                                    <code style="background-color: transparent;padding: 0;">
-                                        &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" &gt;
-                                        <br><br>&lt;link href="https://cdn.jsdelivr.net/gh/CSP02/vanbUI@latest/vanbUI/vanbUI.css"
-                                    rel="stylesheet"&gt;</code>
-                                </button>
-                                <tooltip hang="top" id="copied">Click to copy</tooltip>
-                                <div class="danger">
-                                    <i class="fa-solid fa-triangle-exclamation"></i>
-                                    <p>Linking <a href="https://fontawesome.com">font-awesome</a> cdn is important
-                                        because some components in this library uses font-awesome icons.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="page_2" class="page inactive_page">
-                        <h3>
-                            Button:
-                        </h3>
-                        <div class="section">
-                            <p>
-                                vanbUI has different variants of buttons you can use. For example: <code>primary</code>,
-                                <code>outline</code>, <code>ghost</code>, etc.
-                            </p>
-                            <h4>Usage:</h4>
-                            <p>To use this button component you can define html <code>button</code> element with
-                                attributes <code>vanb = "true"</code> and
-                                <code>variant = "&lt;variant you want to use&gt;"</code>
-                                (variant types are given below) after defining this your code should look something like
-                                this:
-                            </p>
-                            <div id="button_inp_but" class="code_holder">
-                                <button id="cdn_inp" vanb="true" tooltip="true" variant="outline" class="codes">
-                                    <code style="background-color: transparent;padding: 0;">
-                                            &lt;button vanb = "true" variant = "outline"&gt;Outline button&lt;/button&gt;
-                                        </code>
-                                </button>
-                                <tooltip hang="top" id="copied">Click to copy</tooltip>
-                            </div>
-                            <p>and the button looks something like this now:</p>
-                            <button vanb="true" variant="outline">Outline button</button>
-                            <h4>Variants:</h4>
-                            <table>
-                                <tr>
-                                    <th class="first">Varaint name</th>
-                                    <th class="middle">How it looks</th>
-                                    <th class="last">Code to copy (click to copy)</th>
-                                </tr>
-                                <tr>
-                                    <td class="first"><code>primary</code></td>
-                                    <td class="middle"><button vanb="true" variant="primary">Primary</button></td>
-                                    <td class="last"><button class="codes" vanb="true"
-                                            variant="outline"><code style="background-color: transparent;">&lt;button vanb="true" variant="primary"&gt;Primary&lt;/button&gt;</code></button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="first"><code>success</code></td>
-                                    <td class="middle"><button vanb="true" variant="success">Success</button></td>
-                                    <td class="last"><button class="codes" vanb="true"
-                                            variant="outline"><code style="background-color: transparent;">&lt;button vanb="true" variant="success"&gt;Success&lt;/button&gt;</code></button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="first"><code>error</code></td>
-                                    <td class="middle"><button vanb="true" variant="error">Error</button></td>
-                                    <td class="last"><button class="codes" vanb="true"
-                                            variant="outline"><code style="background-color: transparent;">&lt;button vanb="true" variant="error"&gt;Error&lt;/button&gt;</code></button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="first"><code>black</code></td>
-                                    <td class="middle"><button vanb="true" variant="black">Black</button></td>
-                                    <td class="last"><button class="codes" vanb="true"
-                                            variant="outline"><code style="background-color: transparent;">&lt;button vanb="true" variant="black"&gt;Black&lt;/button&gt;</code></button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="first"><code>white</code></td>
-                                    <td class="middle"><button vanb="true" variant="white">White</button></td>
-                                    <td class="last"><button class="codes" vanb="true"
-                                            variant="outline"><code style="background-color: transparent;">&lt;button vanb="true" variant="white"&gt;White&lt;/button&gt;</code></button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="first"><code>outline</code></td>
-                                    <td class="middle"><button vanb="true" variant="outline">Outline</button></td>
-                                    <td class="last"><button class="codes" vanb="true"
-                                            variant="outline"><code style="background-color: transparent;">&lt;button vanb="true" variant="outline"&gt;Outline&lt;/button&gt;</code></button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="first"><code>ghost</code></td>
-                                    <td class="middle"><button vanb="true" variant="ghost">Ghost</button></td>
-                                    <td class="last"><button class="codes" vanb="true"
-                                            variant="outline"><code style="background-color: transparent;">&lt;button vanb="true" variant="ghost"&gt;Ghost&lt;/button&gt;</code></button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="first"><code>loading</code></td>
-                                    <td class="middle"><button vanb="true" variant="loading">Loading</button></td>
-                                    <td class="last"><button class="codes" vanb="true"
-                                            variant="outline"><code style="background-color: transparent;">&lt;button vanb="true" variant="loading"&gt;Loading&lt;/button&gt;</code></button>
-                                    </td>
-                                </tr>
-                            </table>
-                        </div>
-                    </div>
-                    <div id="page_3" class="page inactive_page">
-                        <h3>
-                            Checkbox:
-                        </h3>
-                        <div class="section">
-                            <p>
-                                Checkbox go brrrrr
-                            </p>
-                        </div>
-                    </div>
-                    <div id="page_4" class="page inactive_page">
-                        <h3>
-                            Input:
-                        </h3>
-                        <div class="section">
-                            <p>
-                                Input go brrrrr
-                            </p>
-                        </div>
-                    </div>
-                    <div id="page_5" class="page inactive_page">
-                        <h3>
-                            Avatar:
-                        </h3>
-                        <div class="section">
-                            <p>
-                                Avatar go brrrrr
-                            </p>
-                        </div>
-                    </div>
-                    <div id="page_6" class="page inactive_page">
-                        <h3>
-                            Accordion:
-                        </h3>
-                        <div class="section">
-                            <p>
-                                Accordion go brrrrr
-                            </p>
-                        </div>
-                    </div>
-                    <div id="page_7" class="page inactive_page">
-                        <h3>
-                            Alert:
-                        </h3>
-                        <div class="section">
-                            <p>
-                                Alert go brrrrr
-                            </p>
-                        </div>
-                    </div>
-                    <div id="page_8" class="page inactive_page">
-                        <h3>
-                            Tooltip:
-                        </h3>
-                        <div class="section">
-                            <p>
-                                Tooltip go brrrrr
-                            </p>
-                        </div>
-                    </div>
+      <nav id="navigation" class="nav">
+        <div id="logo_and_open">
+          <img
+            src="https://raw.githubusercontent.com/CSP02/vanbUI/main/Resources/vanbUI_logo.png"
+            alt="vanbUI logo"
+            id="logo"
+            class="vanbUI_icon"
+            id="footer_logo"
+          />
+          <button id="open_menu" vanb="true" variant="ghost">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+        <ul id="menu">
+          <li>
+            <a
+              href="https//github.com/CSP02/Docs/index.html#components"
+              target="_blank"
+              class="nav_links"
+              >Components</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://github.com/CSP02/vanbUI"
+              target="_blank"
+              class="nav_links"
+              >Examples</a
+            >
+          </li>
+        </ul>
+      </nav>
+      <div id="wrapper">
+        <div id="sidebar">
+          <ul>
+            <li><a href="#" class="active page_link">Introduction</a></li>
+            <li><a href="#" class="inactive page_link">Button</a></li>
+            <li><a href="#" class="inactive page_link">Checkbox</a></li>
+            <li><a href="#" class="inactive page_link">Input</a></li>
+            <li><a href="#" class="inactive page_link">Avatar</a></li>
+            <li><a href="#" class="inactive page_link">Accordion</a></li>
+            <li><a href="#" class="inactive page_link">Alert</a></li>
+            <li><a href="#" class="inactive page_link">Tooltip</a></li>
+          </ul>
+        </div>
+        <div id="pages_and_but">
+          <div id="docs_wrapper">
+            <div id="page_1" class="page active_page">
+              <h3>Introduction:</h3>
+              <div class="section">
+                <h4>What is vanbUI?</h4>
+                <p>
+                  vanbUI is a UI library for vanilla. This project is made to
+                  give nice UIs (ex: <a href="https://ui.shadcn.com">shadcn</a>)
+                  for vanilla (vanilla HTML, CSS and JS)
+                </p>
+                <h4>How to use:</h4>
+                <p>
+                  Using vanbUI is pretty easy. All you have to do is define an
+                  attribute
+                  <code>vanb="true"</code> and some other attributes like
+                  <code>variant</code>, <code>type</code>, etc.
+                </p>
+                <p>
+                  You can also copy paste the components right from this docs.
+                  But first you need to add vanbUI css for your page. So use
+                  this cdn below to add it to your webpage.
+                </p>
+                <p>
+                  And vanbUI uses font awesome for icons so you need to include
+                  font awesome as well. As for the fonts.... well it's upto you.
+                </p>
+                <h4>vanbUI cdn:</h4>
+                <div id="cdn_inp_but" class="code_holder">
+                  <button
+                    id="cdn_inp"
+                    vanb="true"
+                    tooltip="true"
+                    variant="outline"
+                    class="codes"
+                  >
+                    <code style="background-color: transparent; padding: 0">
+                      &lt;link rel="stylesheet"
+                      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+                      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+                      crossorigin="anonymous" referrerpolicy="no-referrer" &gt;
+                      <br /><br />&lt;link
+                      href="https://cdn.jsdelivr.net/gh/CSP02/vanbUI@latest/vanbUI/vanbUI.css"
+                      rel="stylesheet"&gt;</code
+                    >
+                  </button>
+                  <tooltip hang="top" id="copied">Click to copy</tooltip>
+                  <div class="danger">
+                    <p>
+                      Linking
+                      <a href="https://fontawesome.com">font-awesome</a> cdn is
+                      important because some components in this library uses
+                      font-awesome icons.
+                    </p>
+                  </div>
                 </div>
-                <div id="pagination_buttons">
-                    <button vanb="true" id="back_button" variant="outline" disabled><i
-                            class="fa-solid fa-angle-left"></i> Back</button>
-                    <button vanb="true" id="next_button" variant="white">Next <i
-                            class="fa-solid fa-angle-right"></i></button>
-                </div>
+              </div>
             </div>
-            <div id="github_changelogs">
-                <h3>Github changelogs:</h3>
-                <p style="opacity: .5;margin: .5rem;padding: .5rem;">vanbUI isn't released yet!</p>
-                <!-- <ul>
+            <div id="page_2" class="page inactive_page">
+              <h3>Button:</h3>
+              <div class="section">
+                <p>
+                  vanbUI has different variants of buttons you can use. For
+                  example: <code>primary</code>, <code>outline</code>,
+                  <code>ghost</code>, etc.
+                </p>
+                <h4>Usage:</h4>
+                <p>
+                  To use this button component you can define html
+                  <code>button</code> element with attributes
+                  <code>vanb = "true"</code> and
+                  <code>variant = "&lt;variant you want to use&gt;"</code>
+                  (variant types are given below) after defining this your code
+                  should look something like this:
+                </p>
+                <div id="button_inp_but" class="code_holder">
+                  <button
+                    id="cdn_inp"
+                    vanb="true"
+                    tooltip="true"
+                    variant="outline"
+                    class="codes"
+                  >
+                    <code style="background-color: transparent; padding: 0">
+                      &lt;button vanb = "true" variant = "outline"&gt;Outline
+                      button&lt;/button&gt;
+                    </code>
+                  </button>
+                  <tooltip hang="top" id="copied">Click to copy</tooltip>
+                </div>
+                <p>and the button looks something like this now:</p>
+                <button vanb="true" variant="outline">Outline button</button>
+                <h4>Variants:</h4>
+                <table>
+                  <tr>
+                    <th class="first">Varaint name</th>
+                    <th class="middle">How it looks</th>
+                    <th class="last">Code to copy (click to copy)</th>
+                  </tr>
+                  <tr>
+                    <td class="first"><code>primary</code></td>
+                    <td class="middle">
+                      <button vanb="true" variant="primary">Primary</button>
+                    </td>
+                    <td class="last">
+                      <button class="codes" vanb="true" variant="outline">
+                        <code style="background-color: transparent"
+                          >&lt;button vanb="true"
+                          variant="primary"&gt;Primary&lt;/button&gt;</code
+                        >
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="first"><code>success</code></td>
+                    <td class="middle">
+                      <button vanb="true" variant="success">Success</button>
+                    </td>
+                    <td class="last">
+                      <button class="codes" vanb="true" variant="outline">
+                        <code style="background-color: transparent"
+                          >&lt;button vanb="true"
+                          variant="success"&gt;Success&lt;/button&gt;</code
+                        >
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="first"><code>error</code></td>
+                    <td class="middle">
+                      <button vanb="true" variant="error">Error</button>
+                    </td>
+                    <td class="last">
+                      <button class="codes" vanb="true" variant="outline">
+                        <code style="background-color: transparent"
+                          >&lt;button vanb="true"
+                          variant="error"&gt;Error&lt;/button&gt;</code
+                        >
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="first"><code>black</code></td>
+                    <td class="middle">
+                      <button vanb="true" variant="black">Black</button>
+                    </td>
+                    <td class="last">
+                      <button class="codes" vanb="true" variant="outline">
+                        <code style="background-color: transparent"
+                          >&lt;button vanb="true"
+                          variant="black"&gt;Black&lt;/button&gt;</code
+                        >
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="first"><code>white</code></td>
+                    <td class="middle">
+                      <button vanb="true" variant="white">White</button>
+                    </td>
+                    <td class="last">
+                      <button class="codes" vanb="true" variant="outline">
+                        <code style="background-color: transparent"
+                          >&lt;button vanb="true"
+                          variant="white"&gt;White&lt;/button&gt;</code
+                        >
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="first"><code>outline</code></td>
+                    <td class="middle">
+                      <button vanb="true" variant="outline">Outline</button>
+                    </td>
+                    <td class="last">
+                      <button class="codes" vanb="true" variant="outline">
+                        <code style="background-color: transparent"
+                          >&lt;button vanb="true"
+                          variant="outline"&gt;Outline&lt;/button&gt;</code
+                        >
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="first"><code>ghost</code></td>
+                    <td class="middle">
+                      <button vanb="true" variant="ghost">Ghost</button>
+                    </td>
+                    <td class="last">
+                      <button class="codes" vanb="true" variant="outline">
+                        <code style="background-color: transparent"
+                          >&lt;button vanb="true"
+                          variant="ghost"&gt;Ghost&lt;/button&gt;</code
+                        >
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="first"><code>loading</code></td>
+                    <td class="middle">
+                      <button vanb="true" variant="loading">Loading</button>
+                    </td>
+                    <td class="last">
+                      <button class="codes" vanb="true" variant="outline">
+                        <code style="background-color: transparent"
+                          >&lt;button vanb="true"
+                          variant="loading"&gt;Loading&lt;/button&gt;</code
+                        >
+                      </button>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+            <div id="page_3" class="page inactive_page">
+              <h3>Checkboxes:</h3>
+              <div class="section">
+                <p>There are two types of checkboxes in vanbUI.</p>
+                <ol style="padding: 0 0.5rem; margin: 0 1rem;">
+                  <li>Switch</li>
+                  <li>Checkbox</li>
+                </ol>
+                <h4>Switch:</h4>
+                <p>
+                  Switches are basically a toggle switch states wither
+                  <code>on/off</code> or <code>true/false</code>. Although these
+                  are switches when it comes to DOM its just a checkbox with
+                  some fancy styling. So when working with JS you can check if
+                  switch is turned on or off by reading if the checkbox is
+                  checked or not. (scroll down to know more)
+                </p>
+                <div>
+                    <h5>This is the code for making a switch:</h5>
+                    <div>
+                        <button vanb="true" variant="outline" class="codes" tooltip="true">
+                          <code style="background-color: transparent;">
+                            &lt;input vanb="true" variant="switch"
+                            type="checkbox" name="test" id="test"&gt;<br>
+                            &lt;label for="test"&gt;Switch&lt;/label&gt;
+                          </code>
+                        </button>
+                        <tooltip hang="top">Click to copy</tooltip>
+                    </div>
+                  <div id="output">
+                    <h5>Output</h5>
+                    <input type="checkbox" vanb="true" variant="switch" name="test" id="test"/>
+                    <label for="test">Switch</label>
+                  </div>
+                </div>
+                <p>
+                  The label here will show the text. And if you don't use any
+                  label... well the switch won't show up.
+                </p>
+                <div class="danger">
+                  <p>
+                    Label tag is a must and without the label tag after the
+                    input tag the switch won't show or the switch might show up
+                    broken. So please follow the syntax shown in the above code. (you can click the code to copy)
+                  </p>
+                </div>
+                <p>
+                    When working with JS (taking above code as example) you can do something like this to know if the swtich is turned on or off:
+                    <button class="codes" vanb="true" variant="outline">
+                        <code style="background-color: transparent;">
+                            const switch = document.getElementById("test");
+                            <br><br>
+                            switch.addEventListener("change", e => {<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;console.log(switch.checked) //this will log true or false
+                            <br>})
+                        </code>
+                    </button>
+                    This above code logs either true or false whenever the switch is clicked.
+                </p>
+                <h4>Checkbox:</h4>
+                <p>This is a general checkbox like we see in normal websites. (but with a bit of styling)</p>
+                <p>To create a checkbox you can use this code:</p>
+                <button class="codes" vanb="true" variant="outline">
+                    <code style="background-color: transparent;">&lt;input type="checkbox" variant="checkbox" name="check_test" id="check_test"/&gt;<br>&lt;label for="check_test"&gt;Check this to agree&lt;/label&gt;</code>
+                </button>
+                <div id="output_checkbox" style="padding: .5rem;">
+                    <h5>Anddd this is the output of the above code:</h5>
+                    <input type="checkbox" name="check_test" id="check_test" vanb="true" variant="checkbox"/>
+                    <label for="check_test">Check this to agree</label>
+                </div>
+                <div style="padding: .5rem; border: 3px solid rgb(206, 63, 63);border-radius: .5rem;margin: .5rem;">
+                    <h5>Here is the output if we put the label before the input:</h5>
+                    <label for="check_test">Check this to agree</label>
+                    <input type="checkbox" name="check_test" id="check_test" vanb="true" variant="checkbox"/>
+                    <p style="padding: 0;">Yes exactly you don't see any checkbox. That is why you must put the label only after input.</p>
+                </div>
+              </div>
+            </div>
+            <div id="page_4" class="page inactive_page">
+              <h3>Input:</h3>
+              <div class="section">
+                <p>vanbUI has different input variants (as of now only text, password are available) like you see those fancy text input where you click focus it and the text goes to the top left of the field like woosh... sorry for the yapping but vanbUI has it in-built.</p>
+                <p>vanbUI has primarily 2 types of input fields.</p>
+                <ol style="padding: 0 0.5rem; margin: 0 1rem">
+                  <li>Fancy, which is done with contenteditable div instead of input.</li>
+                  <li>General, which is a normal input element with some styling.</li>
+                </ol>
+                <h4>Fancy (it's not a variant name. It's just that I didn't name it any):</h4>
+                <p>Well I don't know how to describe it... but see the example below you will understand.</p>
+                <p>
+                  <h4>Code:</h4>
+                  <button class="codes" vanb="true" variant="outline">
+                    <code style="background-color: transparent;">
+                      &lt;div vanb="true" variant="input" contenteditable="true" placeholder="Enter something"&gt;&lt;/div&gt;
+                    </code>
+                  </button>
+                </p>
+                <h4>Output:</h4>
+                <div>
+                  <div data-color="#0f0f0f" vanb="true" type="text" variant="input" contenteditable="true" placeholder="Enter something"></div>
+                </div>
+                <div id="variants">
+                  <h4>Fancy variants a.k.a types:</h4>
+                  <div>
+                    <h5>Code:</h5>
+                    <button class="codes" vanb="true" variant="outline">
+                      <code style="background-color: transparent;">
+                        &lt;div vanb="true" variant="input" contenteditable="true" placeholder="Enter something"&gt;&lt;/div&gt;
+                      </code>
+                    </button>
+                    <h5>Output:</h5>
+                    <div vanb="true" type="text" variant="input" contenteditable="true" placeholder="Enter something"></div>
+                  </div>
+                  <div>
+                    <h5>Code:</h5>
+                    <button class="codes" vanb="true" variant="outline">
+                      <code style="background-color: transparent;">
+                        &lt;div vanb="true" variant="input" contenteditable="true" placeholder="Enter password" security="true"&gt;&lt;/div&gt;
+                      </code>
+                    </button>
+                    <h5>Output:</h5>
+                    <div vanb="true" type="text" variant="input" contenteditable="true" placeholder="Enter password" security="true"></div>
+                  </div>
+                </div>
+                <div class="info">
+                  <p>While using the above fancy (I mean the contenteditable div), there are certain stuff you need to change in your JS. For example if you want to get the value of the field instead of doing <code>&lt;element&gt;.value</code> you have to do <code>&lt;element&gt;.innerText</code></p>
+                </div>
+                <h5>General</h5>
+                <p>As the name implies its just a simple, default HTML input element.</p>
+                <p>The only thing that changes are two attributes which are <code>vanb="true"</code> and <code>variant="input"</code> (because remember that we have input type checkbox and switch variant)</p>
+                <h5>Code:</h5>
+                <button class="codes" vanb="true" variant="outline">
+                  <code style="background-color: transparent;">
+                    &lt;input type="text" vanb="true" variant="input" placeholder="Enter something"&gt;
+                  </code>
+                </button>
+                <h5>Output:</h5>
+                <input type="text" vanb="true" variant="input" placeholder="Enter something">
+                <div class="info">
+                  <p>For this type of input element you can follow the default way to get the value of field. (which is <code>&lt;element&gt;.value</code>)</p>
+                </div>
+              </div>
+            </div>
+            <div id="page_5" class="page inactive_page">
+              <h3>Avatar:</h3>
+              <div class="section">
+                <p>Avatar go brrrrr</p>
+              </div>
+            </div>
+            <div id="page_6" class="page inactive_page">
+              <h3>Accordion:</h3>
+              <div class="section">
+                <p>Accordion go brrrrr</p>
+              </div>
+            </div>
+            <div id="page_7" class="page inactive_page">
+              <h3>Alert:</h3>
+              <div class="section">
+                <p>Alert go brrrrr</p>
+              </div>
+            </div>
+            <div id="page_8" class="page inactive_page">
+              <h3>Tooltip:</h3>
+              <div class="section">
+                <p>Tooltip go brrrrr</p>
+              </div>
+            </div>
+          </div>
+          <div id="pagination_buttons">
+            <button vanb="true" id="back_button" variant="outline" disabled>
+              <i class="fa-solid fa-angle-left"></i> Back
+            </button>
+            <button vanb="true" id="next_button" variant="white">
+              Next <i class="fa-solid fa-angle-right"></i>
+            </button>
+          </div>
+        </div>
+        <div id="github_changelogs">
+          <h3>Github changelogs:</h3>
+          <p style="opacity: 0.5; margin: 0.5rem; padding: 0.5rem">
+            vanbUI isn't released yet!
+          </p>
+          <!-- <ul>
                     <li></li>
                 </ul> -->
-            </div>
         </div>
-        <footer>
-            <div style="display: flex;align-items: flex-start;flex-wrap: wrap;">
-                <div class="footer_links">
-                    <h3>Getting started</h3>
-                    <ul>
-                        <li><a href="#">Examples</a></li>
-                        <li><a href="#">Components</a></li>
-                        <li><a href="#">Download</a></li>
-                    </ul>
-                </div>
-                <div class="footer_links">
-                    <h3>Community</h3>
-                    <ul>
-                        <li><a href="#">Discord</a></li>
-                        <li><a href="#">GitHub</a></li>
-                        <li><a href="#">Change logs</a></li>
-                    </ul>
-                </div>
-                <div class="footer_links">
-                    <h3>Help</h3>
-                    <ul>
-                        <li><a href="#">Documentation</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer_links">
-                <img src="https://raw.githubusercontent.com/CSP02/vanbUI/main/Resources/vanbUI_logo.png" alt=""
-                    class="vanbUI_icon" id="footer_logo">
-            </div>
-        </footer>
+      </div>
+      <footer>
+        <div style="display: flex; align-items: flex-start; flex-wrap: wrap">
+          <div class="footer_links">
+            <h3>Getting started</h3>
+            <ul>
+              <li><a href="#">Examples</a></li>
+              <li><a href="#">Components</a></li>
+              <li><a href="#">Download</a></li>
+            </ul>
+          </div>
+          <div class="footer_links">
+            <h3>Community</h3>
+            <ul>
+              <li><a href="#">Discord</a></li>
+              <li><a href="#">GitHub</a></li>
+              <li><a href="#">Change logs</a></li>
+            </ul>
+          </div>
+          <div class="footer_links">
+            <h3>Help</h3>
+            <ul>
+              <li><a href="#">Documentation</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer_links">
+          <img
+            src="https://raw.githubusercontent.com/CSP02/vanbUI/main/Resources/vanbUI_logo.png"
+            alt=""
+            class="vanbUI_icon"
+            id="footer_logo"
+          />
+        </div>
+      </footer>
     </div>
     <script src="./script.js"></script>
-</body>
-
+  </body>
 </html>

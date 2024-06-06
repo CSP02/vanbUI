@@ -43,12 +43,12 @@ window.onload = () => {
 
             navigator.clipboard.writeText(cdn).then(callback => {
                 code.style.outline = "1px solid green"
-                if (code.nextSibling.nextSibling)
+                if (code.getAttribute("tooltip") === true && code.nextSibling.nextSibling)
                     code.nextSibling.nextSibling.innerText = "Copied"
 
                 setTimeout(() => {
                     code.style = ""
-                    if (code.nextSibling.nextSibling)
+                    if (code.getAttribute("tooltip") === true && code.nextSibling.nextSibling)
                         code.nextSibling.nextSibling.innerText = "Click to copy"
                 }, 3000)
             })
