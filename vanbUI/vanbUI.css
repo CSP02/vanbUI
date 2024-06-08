@@ -100,7 +100,8 @@ input[vanb="true"][type="checkbox"][variant="switch"]+label::after {
     margin: .3rem;
     padding: .3rem;
 }
-input[vanb="true"][type="checkbox"][variant="switch"]+label{
+
+input[vanb="true"][type="checkbox"][variant="switch"]+label {
     display: flex;
     width: fit-content;
     align-items: center;
@@ -154,6 +155,8 @@ div[vanb="true"][type="text"][variant="input"][contenteditable="true"] {
     background-color: transparent;
     border: none;
     border-radius: .3rem;
+    width: 100%;
+    max-width: 50dvw;
 }
 
 div[vanb="true"][type="text"][variant="input"][contenteditable="true"]::before {
@@ -269,6 +272,7 @@ accordion label {
     padding: .5rem;
     transition: .2s ease;
     border-radius: .3rem;
+    align-items: center;
 }
 
 accordion label:hover {
@@ -356,7 +360,7 @@ badge {
     color: rgb(0, 0, 0);
     padding: .125rem .625rem;
     margin: .3rem;
-    display: block;
+    display: inline-block;
     font-size: 12pt;
     font-weight: bold;
 }
@@ -400,7 +404,7 @@ tooltip[hang="top"] {
     border-radius: .6rem;
 }
 
-tooltip{
+tooltip {
     left: calc(50% - 2.65rem);
 }
 
@@ -417,12 +421,13 @@ tooltip[hang="top"] {
     color: black;
 }
 
-*[tooltip="true"]:hover+tooltip::after, *[tooltip="true"]:hover+tooltip::before {
+*[tooltip="true"]:hover+tooltip::after,
+*[tooltip="true"]:hover+tooltip::before {
     transform: rotate(45deg);
     transition: .2s ease;
 }
 
-tooltip[hang="top"]::after{
+tooltip[hang="top"]::after {
     position: absolute;
     content: "";
     height: 14px;
@@ -434,7 +439,7 @@ tooltip[hang="top"]::after{
     transition: .2s ease;
 }
 
-tooltip[hang="bottom"]::before{
+tooltip[hang="bottom"]::before {
     position: absolute;
     content: "";
     height: 14px;
@@ -491,7 +496,7 @@ input[vanb="true"][type="checkbox"][variant="switch"]+label:hover {
     cursor: pointer;
 }
 
-input[vanb="true"]:disabled{
+input[vanb="true"]:disabled {
     opacity: .5;
 }
 

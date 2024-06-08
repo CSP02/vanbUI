@@ -100,4 +100,25 @@ window.onload = () => {
         activePage.style.zIndex = "0"
         activePage.classList.replace("active_page", "inactive_page")
     })
+
+    const tryIt = document.getElementById("alert_try_it")
+    const variantSelector = document.getElementById("select_variant")
+    const typeSelector = document.getElementById("select_type")
+
+    const tryItCode = document.getElementById("try_it_code")
+    tryItCode.innerText = `<alert type="info" variant="general">\n\t<atitle>This is the title!</atitle>\n\t<alertdes>This is the description.</alertdes>\n</alert>`
+
+    variantSelector.addEventListener("change", e => {
+        tryIt.setAttribute("variant", variantSelector.value)
+        const text = `<alert type="${typeSelector.value}" variant="${variantSelector.value}">\n\t<atitle>This is the title!</atitle>\n\t<alertdes>This is the description.</alertdes>\n</alert>`
+
+        tryItCode.innerText = text
+    })
+
+    typeSelector.addEventListener("change", e => {
+        tryIt.setAttribute("type", typeSelector.value)
+        const text = `<alert type="${typeSelector.value}" variant="${variantSelector.value}">\n\t<atitle>This is the title!</atitle>\n\t<alertdes>This is the description.</alertdes>\n</alert>`
+
+        tryItCode.innerText = text
+    })
 }

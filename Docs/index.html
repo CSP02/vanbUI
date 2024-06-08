@@ -301,7 +301,7 @@
                   checked or not. (scroll down to know more)
                 </p>
                 <div>
-                    <h5>This is the code for making a switch:</h5>
+                    <h4>This is the code for making a switch:</h4>
                     <div>
                         <button vanb="true" variant="outline" class="codes" tooltip="true">
                           <code style="background-color: transparent;">
@@ -313,7 +313,7 @@
                         <tooltip hang="top">Click to copy</tooltip>
                     </div>
                   <div id="output">
-                    <h5>Output</h5>
+                    <h4>Output</h4>
                     <input type="checkbox" vanb="true" variant="switch" name="test" id="test"/>
                     <label for="test">Switch</label>
                   </div>
@@ -349,12 +349,12 @@
                     <code style="background-color: transparent;">&lt;input type="checkbox" variant="checkbox" name="check_test" id="check_test"/&gt;<br>&lt;label for="check_test"&gt;Check this to agree&lt;/label&gt;</code>
                 </button>
                 <div id="output_checkbox" style="padding: .5rem;">
-                    <h5>Anddd this is the output of the above code:</h5>
+                    <h4>Anddd this is the output of the above code:</h4>
                     <input type="checkbox" name="check_test" id="check_test" vanb="true" variant="checkbox"/>
                     <label for="check_test">Check this to agree</label>
                 </div>
                 <div style="padding: .5rem; border: 3px solid rgb(206, 63, 63);border-radius: .5rem;margin: .5rem;">
-                    <h5>Here is the output if we put the label before the input:</h5>
+                    <h4>Here is the output if we put the label before the input:</h4>
                     <label for="check_test">Check this to agree</label>
                     <input type="checkbox" name="check_test" id="check_test" vanb="true" variant="checkbox"/>
                     <p style="padding: 0;">Yes exactly you don't see any checkbox. That is why you must put the label only after input.</p>
@@ -387,39 +387,39 @@
                 <div id="variants">
                   <h4>Fancy variants a.k.a types:</h4>
                   <div>
-                    <h5>Code:</h5>
+                    <h4>Code:</h4>
                     <button class="codes" vanb="true" variant="outline">
                       <code style="background-color: transparent;">
                         &lt;div vanb="true" variant="input" contenteditable="true" placeholder="Enter something"&gt;&lt;/div&gt;
                       </code>
                     </button>
-                    <h5>Output:</h5>
+                    <h4>Output:</h4>
                     <div vanb="true" type="text" variant="input" contenteditable="true" placeholder="Enter something"></div>
                   </div>
                   <div>
-                    <h5>Code:</h5>
+                    <h4>Code:</h4>
                     <button class="codes" vanb="true" variant="outline">
                       <code style="background-color: transparent;">
                         &lt;div vanb="true" variant="input" contenteditable="true" placeholder="Enter password" security="true"&gt;&lt;/div&gt;
                       </code>
                     </button>
-                    <h5>Output:</h5>
+                    <h4>Output:</h4>
                     <div vanb="true" type="text" variant="input" contenteditable="true" placeholder="Enter password" security="true"></div>
                   </div>
                 </div>
                 <div class="info">
                   <p>While using the above fancy (I mean the contenteditable div), there are certain stuff you need to change in your JS. For example if you want to get the value of the field instead of doing <code>&lt;element&gt;.value</code> you have to do <code>&lt;element&gt;.innerText</code></p>
                 </div>
-                <h5>General</h5>
+                <h4>General</h4>
                 <p>As the name implies its just a simple, default HTML input element.</p>
                 <p>The only thing that changes are two attributes which are <code>vanb="true"</code> and <code>variant="input"</code> (because remember that we have input type checkbox and switch variant)</p>
-                <h5>Code:</h5>
+                <h4>Code:</h4>
                 <button class="codes" vanb="true" variant="outline">
                   <code style="background-color: transparent;">
                     &lt;input type="text" vanb="true" variant="input" placeholder="Enter something"&gt;
                   </code>
                 </button>
-                <h5>Output:</h5>
+                <h4>Output:</h4>
                 <input type="text" vanb="true" variant="input" placeholder="Enter something">
                 <div class="info">
                   <p>For this type of input element you can follow the default way to get the value of field. (which is <code>&lt;element&gt;.value</code>)</p>
@@ -429,19 +429,92 @@
             <div id="page_5" class="page inactive_page">
               <h3>Avatar:</h3>
               <div class="section">
-                <p>Avatar go brrrrr</p>
+                <p>Avatar:</p>
+                <div class="section">
+                  <p>Avatar.... yeah.... I don't know why I added this. But well there is only one avatar style for now. (will update later when more variants were added)</p>
+                </div>
               </div>
             </div>
             <div id="page_6" class="page inactive_page">
               <h3>Accordion:</h3>
               <div class="section">
-                <p>Accordion go brrrrr</p>
+                <p>Accordions are the elements where you click on them and they show some more details about the topic.</p>
+                <p><i>Accordions are basically used in FAQs and stuff.</i></p>
+                <p>You can create an accordion using the code below:</p>
+                <button class="codes" vanb="true" variant="outline">
+                  <code style="background-color: transparent;"> 
+                    &lt;accordion&gt;<br>
+                    &nbsp;&lt;input type="checkbox" name="ac_test" id="ac_test" vanb="true" variant="accordion"&gt;
+                    <br>&nbsp;&lt;label for="ac_test"&gt;Click me to open&lt;/label&gt;
+                    <br>&nbsp;&lt;acdescription&gt;This the description of the accordion&lt;/acdescription&gt;
+                    <br>&lt;/accordion&gt;
+                  </code>
+                </button>
+                <div id="output">
+                  <accordion>
+                    <input type="checkbox" name="ac_test" id="ac_test" vanb="true" variant="accordion">
+                    <label for="ac_test">Click me to open</label>
+                    <acdescription>This is the accordion description</acdescription>
+                  </accordion>
+                </div>
+                <div class="info">
+                  <p>You can see that the input tag is before the label tag and its important to put it in front (well unless if it's ok if you don't want that lil icon to display)</p>
+                </div>
+                <div class="danger">
+                  <p>The <code>name</code> and <code>id</code> attributes of input tag must match the <code>for</code> attribute of label tag. If it didn't match the description won't event open up. So thoroughly check those attributes.</p>
+                </div>
               </div>
             </div>
             <div id="page_7" class="page inactive_page">
               <h3>Alert:</h3>
               <div class="section">
-                <p>Alert go brrrrr</p>
+                <p></p>
+                <p>You can use the code blow to create an alert:</p>
+                <button class="codes" vanb="true" variant="outline">
+                  <code style="background-color: transparent;">
+                  &lt;alert type="info" variant="general"&gt;<br>
+                    &nbsp;&lt;atitle&gt;Hey this is an informative alert!&lt;/atitle&gt;<br>
+                    &nbsp;&lt;alertdes&gt;Yeah... this information is really usefull.&lt;/alertdes&gt;<br>
+                  &lt;/alert&gt;
+                  </code>
+                </button>
+                <div id="output">
+                  <alert type="info" variant="general">
+                    <atitle>Hey this is an informative alert!</atitle>
+                    <alertdes>Yeah... this information is really usefull.</alertdes>
+                  </alert>
+                </div>
+                <h4>Varaints and types:</h4>
+                <p>vanbUI has 2 types and 2 variants of alerts. (That makes it a total of 4 different styles). They are:</p>
+                <ol style="padding: 0 0.5rem;margin: 0 1rem;">
+                  <li>General variant, error type</li>
+                  <li>General variant, info type</li>
+                  <li>Terminal variant, error type</li>
+                  <li>Terminal variant, info type</li>
+                </ol>
+
+                <div id="try_it">
+                  <h4>Try it <badge>live</badge></h4>
+                  <div id="try_it_options">
+                    <select name="select_variant" id="select_variant" class="selector">
+                      <option value="general">General</option>
+                      <option value="terminal">Terminal</option>
+                    </select>
+                    <select name="select_type" id="select_type" class="selector">
+                      <option value="info">Info</option>
+                      <option value="error">Error</option>
+                    </select>
+                  </div>
+                  <div id="try_it_output">
+                    <button class="codes" vanb="true" variant="outline">
+                      <code style="background-color: transparent;white-space: pre;" id="try_it_code"></code>
+                    </button>
+                    <alert variant="general" type="info" id="alert_try_it">
+                      <atitle>This is the title!</atitle>
+                      <alertdes>This is the description.</alertdes>
+                    </alert>
+                  </div>
+                </div>
               </div>
             </div>
             <div id="page_8" class="page inactive_page">
