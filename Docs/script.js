@@ -2,9 +2,12 @@ window.onload = () => {
     const openMenu = document.getElementById("open_menu")
 
     openMenu.addEventListener("click", () => {
-        const toggler = new Toggler
+        const menu = document.getElementById("menu")
+        menu.classList.toggle("open_ul")
+        // console.log(menu.offsetLeft, menu.offsetWidth, menu.clientLeft, menu.clientWidth)
+        // if(menu.style.marginLeft === "-100%") menu.style.marginLeft = "-1rem"
+        // else menu.style.marginLeft = "-100%"
         openMenu.getElementsByTagName("i")[0].classList.toggle("fa-xmark")
-        toggler.toggleSlide("menu", "right", .2)
     })
 
     const pageLinks = [...document.getElementsByClassName("page_link")]

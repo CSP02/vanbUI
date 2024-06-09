@@ -37,7 +37,7 @@
             <i class="fa-solid fa-bars"></i>
           </button>
         </div>
-        <ul id="menu">
+        <ul id="menu" class="menu close_ul">
           <li>
             <a
               href="https//github.com/CSP02/Docs/index.html#components"
@@ -520,7 +520,28 @@
             <div id="page_8" class="page inactive_page">
               <h3>Tooltip:</h3>
               <div class="section">
-                <p>Tooltip go brrrrr</p>
+                <p>Tooltip are the element which pop up when user hovers on something. Note that tooltips are only used to show little info about the element.</p>
+                <h4>How to add tooltip:</h4>
+                <p>To add a tooltip for any element all you need to do is add <code>tooltip="true"</code> attribute and create a <code>tooltip</code> element with an attribute called <code>hang</code></p>
+                <h4>Code:</h4>
+                <button class="codes" vanb="true" variant="outline">
+                  <code style="background-color: transparent;">
+                    &lt;div style="position: relative;"&gt;<br>
+                    &emsp;&lt;button tooltip="true"&gt;Hover on me!&lt;/button&gt;<br>
+                    &emsp;&lt;tooltip hang="bottom"&gt;Tooltip&lt;/tooltip&gt;<br>
+                    &lt;/div&gt;
+                  </code>
+                </button>
+                <div id="output" style="width: fit-content;">
+                    <h4>Output:</h4>
+                    <button tooltip="true" style="padding: .5rem;">Hover on me!</button>
+                    <tooltip hang="bottom">Tooltip</tooltip>
+                </div>
+                <div class="note">
+                  <p>
+                    Tooltips might break sometimes based on the <code>position</code> property of the parent element. We strongly recommend you to set the <code>position</code> property to <code>relative</code>.
+                  </p>
+                </div>
               </div>
             </div>
           </div>

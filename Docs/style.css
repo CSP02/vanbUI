@@ -136,7 +136,7 @@ h4 {
     display: none;
 }
 
-#navigation ul {
+.menu {
     margin: 0 .3rem;
     padding: 0 5rem;
 }
@@ -171,7 +171,7 @@ h4 {
 }
 
 code {
-    background-color: rgb(29, 29, 29);
+    background-color: rgb(50 50 50);
     border-radius: .3rem;
     padding: .3rem;
 }
@@ -272,6 +272,7 @@ code {
     background-color: #ffa5005e;
     border-radius: .3rem;
     border-left: 4px solid #ffff007d;
+    z-index: 0;
 }
 
 .note p,
@@ -447,23 +448,33 @@ option {
         z-index: 6;
     }
 
-    #navigation ul {
+    .menu {
         display: grid;
         height: 95dvh;
-        border-top-left-radius: 45px;
-        border-bottom-left-radius: 45px;
+        border-top-right-radius: 45px;
+        border-bottom-right-radius: 45px;
         width: 70dvw;
-        margin-right: -70dvw;
         background-color: rgb(22, 22, 22);
         justify-content: center;
         align-content: center;
         z-index: -1;
         padding: 0;
+        position: absolute;
+        transition: .2s ease;
+    }
+
+    .close_ul{
+        margin-left: -100%;
+    }
+
+    .open_ul{
+        margin-left: -1rem;
     }
 
     #open_menu {
         display: block;
         font-size: 1rem;
+        z-index: 2;
     }
 
     #sidebar,

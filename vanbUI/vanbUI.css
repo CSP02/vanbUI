@@ -410,7 +410,12 @@ tooltip {
 
 tooltip[hang="top"] {
     top: 0;
-    transform: translateY(-110%);
+    transform: translateY(-130%);
+}
+
+tooltip[hang="bottom"] {
+    bottom: 0;
+    transform: translateY(130%);
 }
 
 *[tooltip="true"]:hover+tooltip {
