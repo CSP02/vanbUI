@@ -463,18 +463,24 @@ option {
         transition: .2s ease;
     }
 
-    .close_ul{
+    .close_ul {
         margin-left: -100%;
     }
 
-    .open_ul{
+    .open_ul {
         margin-left: -1rem;
     }
 
     #open_menu {
-        display: block;
+        display: flex;
         font-size: 1rem;
         z-index: 2;
+        padding: .5rem;
+        height: 50px;
+        width: 60px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
     #sidebar,
@@ -489,7 +495,47 @@ option {
 
     .page {
         width: 100%;
-        max-width: calc(100dvw - 4.6rem);
+        max-width: calc(100dvw - 2.5rem);
+    }
+
+    .hr {
+        width: 30px;
+        border: none;
+        border-radius: 1rem;
+        padding: 1.5px;
+        margin: 4px;
+        outline: none;
+        background-color: white;
+        transition: .2s ease;
+        position: absolute;
+    }
+
+    .hr1 {
+        transform: translateY(-10px);
+    }
+
+    .hr3 {
+        transform: translateY(10px);
+    }
+
+    .rotate_pos {
+        transform: translateY(0px) rotate(45deg);
+        margin: 0px;
+        transition: .2s ease;
+        position: absolute;
+    }
+
+    .remove_hr {
+        opacity: 0;
+        transition: .2s ease;
+        position: absolute;
+    }
+
+    .rotate_neg {
+        transform: translateY(0px) rotate(-45deg);
+        margin: 0px;
+        transition: .2s ease;
+        position: absolute;
     }
 
     .codes code {
@@ -497,11 +543,12 @@ option {
         display: block;
     }
 
-    #cdn_inp, .codes {
+    #cdn_inp,
+    .codes {
         width: 75dvw;
     }
 
-    alert{
+    alert {
         max-width: 100dvw;
     }
 

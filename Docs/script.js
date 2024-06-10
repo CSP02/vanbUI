@@ -3,11 +3,16 @@ window.onload = () => {
 
     openMenu.addEventListener("click", () => {
         const menu = document.getElementById("menu")
+
+        const openHr1 = document.getElementById("open_hr1")
+        const openHr2 = document.getElementById("open_hr2")
+        const openHr3 = document.getElementById("open_hr3")
+
+        openHr1.classList.toggle("rotate_pos")
+        openHr2.classList.toggle("remove_hr")
+        openHr3.classList.toggle("rotate_neg")
         menu.classList.toggle("open_ul")
-        // console.log(menu.offsetLeft, menu.offsetWidth, menu.clientLeft, menu.clientWidth)
-        // if(menu.style.marginLeft === "-100%") menu.style.marginLeft = "-1rem"
-        // else menu.style.marginLeft = "-100%"
-        openMenu.getElementsByTagName("i")[0].classList.toggle("fa-xmark")
+        // openMenu.getElementsByTagName("i")[0].classList.toggle("fa-xmark")
     })
 
     const pageLinks = [...document.getElementsByClassName("page_link")]
