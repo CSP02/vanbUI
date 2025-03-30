@@ -216,12 +216,6 @@ input[vanb=true][type="password"][variant="input"]:focus {
     outline-offset: 2px;
 }
 
-img[vanb="true"][type="avatar_small"] {
-    height: 45px;
-    width: 45px;
-    border-radius: 50%;
-}
-
 accordion {
     margin: .5rem;
     padding: .5rem;
