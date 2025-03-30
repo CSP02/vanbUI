@@ -83,22 +83,7 @@ button[vanb="true"][variant="error"] {
 input[vanb="true"][type="checkbox"][variant="switch"] {
     display: none;
     font: var(--fa-font-solid);
-}
-
-input[vanb="true"][type="checkbox"][variant="switch"]+label::after {
-    font: var(--fa-font-solid);
-    color: white;
-    font-size: 18pt;
-    content: "\f111";
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    width: 60px;
-    background-color: #CE3838;
-    border-radius: 45px;
-    transition: .2s ease;
-    margin: .3rem;
-    padding: .3rem;
+    transition: .2s ease-in-out;
 }
 
 input[vanb="true"][type="checkbox"][variant="switch"]+label {
@@ -229,12 +214,6 @@ input[vanb=true][type="text"][variant="input"]:focus,
 input[vanb=true][type="password"][variant="input"]:focus {
     outline: 3px solid white;
     outline-offset: 2px;
-}
-
-input[vanb="true"][type="checkbox"][variant="switch"]:checked+label::after {
-    justify-content: flex-end;
-    transition: .2s ease;
-    background-color: #34B132;
 }
 
 img[vanb="true"][type="avatar_small"] {
@@ -370,6 +349,33 @@ badge:hover {
     opacity: .7;
 }
 
+img[type="avatar"][vanb="true"][variant="circle"] {
+    border-radius: 50%;
+}
+
+img[type="avatar"][vanb="true"][variant="rounded"] {
+    border-radius: .5rem;
+}
+
+img[type="avatar"][vanb="true"] {
+    border-radius: 50%;
+}
+
+img[type="avatar"][vanb="true"][size="small"] {
+    height: 32px;
+    width: 32px;
+}
+
+img[type="avatar"][vanb="true"][size="medium"] {
+    height: 64px;
+    width: 64px;
+}
+
+img[type="avatar"][vanb="true"][size="large"] {
+    height: 128px;
+    width: 128px;
+}
+
 /* TODO: styling Alerts */
 /* alert[variant="dialog"] adialog{
     position: absolute;
@@ -399,9 +405,10 @@ tooltip[hang="top"] {
     justify-content: center;
     align-items: center;
     padding: 0rem 1rem;
-    width: fit-content;
+    width: max-content;
     transition: .2s ease;
     border-radius: .6rem;
+    visibility: hidden;
 }
 
 tooltip {
@@ -424,6 +431,7 @@ tooltip[hang="bottom"] {
     transition: .2s ease;
     height: 1rem;
     color: black;
+    visibility: visible;
 }
 
 *[tooltip="true"]:hover+tooltip::after,
