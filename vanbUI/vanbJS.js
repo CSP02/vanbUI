@@ -5,7 +5,7 @@ window.addEventListener("load", load => {
         const label = sInputEl;
         const actionIndicator = document.createElement("span");
         const circle = document.createElement('span');
-        
+
         actionIndicator.style = `border-radius: 1.3rem;
             height: 2.3rem;
             width: 4rem;
@@ -24,15 +24,15 @@ window.addEventListener("load", load => {
 
         // console.log(sInputEl.previousElementSibling)
         sInputEl.previousElementSibling.addEventListener("change", e => {
-            if(sInputEl.previousElementSibling.checked) {
+            if (sInputEl.previousElementSibling.checked) {
                 circle.style.marginLeft = "calc(100% - 1.7rem)";
                 actionIndicator.style.backgroundColor = "rgb(181, 255, 151)";
-            }else{
+            } else {
                 circle.style.marginLeft = "0";
                 actionIndicator.style.backgroundColor = "rgb(230, 230, 230)";
             }
         })
-        
+
         actionIndicator.appendChild(circle);
         label.appendChild(actionIndicator);
     })
@@ -45,4 +45,41 @@ window.addEventListener("load", load => {
         avatar.style.width = avatar.getAttribute("data-dim") + "px";
     })
     //? completed custom avatar
+
+    //? select menus
+    const selectEls = document.querySelectorAll("select[vanb=true]");
+    selectEls.forEach(selectEl => {
+        const customSelEl = document.createElement("button");
+        const optionsHolder = document.createElement("div");
+
+        customSelEl.setAttribute("vanb", "true");
+        customSelEl.setAttribute("type", "select");
+
+        customSelEl.addEventListener("click", e => {
+            optionsHolder.toggleAttribute("data-open");
+        });
+
+        customSelEl.innerText = "Select";
+
+        const options = selectEl.children;
+        [...options].forEach(option => {
+            const customOption = document.createElement("button");
+            customOption.addEventListener("click", e => {
+                customSelEl.innerText = option.innerText;
+                optionsHolder.toggleAttribute("data-open");
+                selectEl.value = option.value;
+
+                selectEl.dispatchEvent(new Event("change"));
+            });
+
+            customOption.innerText = option.innerText;
+            optionsHolder.appendChild(customOption);
+        });
+
+        selectEl.style.display = "none";
+        selectEl.parentElement.style.position = "relative";
+        selectEl.parentElement.appendChild(customSelEl);
+        selectEl.parentElement.appendChild(optionsHolder);
+    });
+    //? end of select elements
 })

@@ -58,7 +58,7 @@ svg {
     scale: 2;
 }
 
-.nav_links{
+.nav_links {
     font-size: .875rem;
     padding: .7rem;
 }
@@ -67,7 +67,7 @@ svg {
     width: 64px;
 }
 
-#footer_logo{
+#footer_logo {
     width: 150px;
 }
 
@@ -159,7 +159,7 @@ svg {
     padding: 0 5rem;
 }
 
-#navigation ul li{
+#navigation ul li {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -249,6 +249,10 @@ svg {
     height: 100%;
     align-content: center;
     display: grid;
+}
+
+#cdn, footer {
+    z-index: -1;
 }
 
 #buttons_iframe_holder,
@@ -431,7 +435,7 @@ option {
         overflow-wrap: break-word;
     }
 
-    footer img{
+    footer img {
         width: 100%;
     }
 }

@@ -44,12 +44,15 @@
         <ul>
           <li><a href="#" class="active page_link">Introduction</a></li>
           <li><a href="#" class="inactive page_link">Button</a></li>
+          <li><a href="#" class="inactive page_link">Button Group</a></li>
           <li><a href="#" class="inactive page_link">Checkbox</a></li>
           <li><a href="#" class="inactive page_link">Input</a></li>
           <li><a href="#" class="inactive page_link">Avatar</a></li>
           <li><a href="#" class="inactive page_link">Accordion</a></li>
           <li><a href="#" class="inactive page_link">Alert</a></li>
           <li><a href="#" class="inactive page_link">Tooltip</a></li>
+          <li><a href="#" class="inactive page_link">Code</a></li>
+          <li><a href="#" class="inactive page_link">Select</a></li>
         </ul>
       </div>
       <div id="pages_and_but">
@@ -69,13 +72,9 @@
                 attribute
                 <code>vanb="true"</code> and some other attributes like
                 <code>variant</code>, <code>type</code>, etc.
-              </p>
-              <p>
                 You can also copy paste the components right from this docs.
                 But first you need to add vanbUI css for your page. So use
                 this cdn below to add it to your webpage.
-              </p>
-              <p>
                 And vanbUI uses font awesome for icons so you need to include
                 font awesome as well. As for the fonts.... well it's upto you.
               </p>
@@ -89,7 +88,9 @@
                       crossorigin="anonymous" referrerpolicy="no-referrer" &gt;
                       <br /><br />&lt;link
                       href="https://cdn.jsdelivr.net/gh/CSP02/vanbUI@latest/vanbUI/vanbUI.css"
-                      rel="stylesheet"&gt;</code>
+                      rel="stylesheet"&gt;
+                      <br />&lt;script src="https://cdn.jsdelivr.net/gh/CSP02/vanbUI@main/vanbUI/vanbJS.js"&gt;&lt;/script&gt;
+                    </code>
                 </button>
                 <tooltip hang="top" id="copied">Click to copy</tooltip>
                 <div class="danger">
@@ -97,7 +98,7 @@
                     Linking
                     <a href="https://fontawesome.com">font-awesome</a> cdn is
                     important because some components in this library uses
-                    font-awesome icons.
+                    font-awesome icons. vanbUI also uses vanbJS for adding some tweaks to the components. so you have to link the vanbJS cdn as well. 
                   </p>
                 </div>
               </div>
@@ -238,10 +239,37 @@
             </div>
           </div>
           <div id="page_3" class="page inactive_page">
+            <h3>Button Group:</h3>
+            <div class="section">
+              <p>
+                You can group the buttons in vanbUI and yes you can group different styled buttons. Use the code below to create a button group.
+              </p>
+              <h4>Code:</h4>
+              <div id="button_inp_but" class="code_holder">
+                <button id="cdn_inp" vanb="true" tooltip="true" variant="outline" class="codes">
+                  <code style="background-color: transparent; padding: 0">
+                    &lt;ButtonGroup&gt;<br>
+                      &nbsp;&lt;button vanb = "true" variant = "primary"&gt;A&lt;/button&gt;<br>
+                      &nbsp;&lt;button vanb = "true" variant = "primary"&gt;B&lt;/button&gt;<br>
+                      &nbsp;&lt;button vanb = "true" variant = "primary"&gt;C&lt;/button&gt;<br>
+                    &lt;/ButtonGroup&gt;
+                    </code>
+                </button>
+                <tooltip hang="top" id="copied">Click to copy</tooltip>
+              </div>
+              <p>and the button looks something like this now:</p>
+              <ButtonGroup>
+                <button vanb="true" variant="primary">A</button>
+                <button vanb="true" variant="primary">B</button>
+                <button vanb="true" variant="primary">C</button>
+              </ButtonGroup>
+            </div>
+          </div>
+          <div id="page_4" class="page inactive_page">
             <h3>Checkboxes:</h3>
             <div class="section">
               <p>There are two types of checkboxes in vanbUI.</p>
-              <ol style="padding: 0 0.5rem; margin: 0 1rem;">
+              <ol>
                 <li>Switch</li>
                 <li>Checkbox</li>
               </ol>
@@ -318,14 +346,14 @@
               </div>
             </div>
           </div>
-          <div id="page_4" class="page inactive_page">
+          <div id="page_5" class="page inactive_page">
             <h3>Input:</h3>
             <div class="section">
               <p>vanbUI has different input variants (as of now only text, password are available) like you see those
                 fancy text input where you click focus it and the text goes to the top left of the field like woosh...
                 sorry for the yapping but vanbUI has it in-built.</p>
               <p>vanbUI has primarily 2 types of input fields.</p>
-              <ol style="padding: 0 0.5rem; margin: 0 1rem">
+              <ol>
                 <li>Fancy, which is done with contenteditable div instead of input.</li>
                 <li>General, which is a normal input element with some styling.</li>
               </ol>
@@ -346,17 +374,6 @@
               </div>
               <div id="variants">
                 <h4>Fancy variants a.k.a types:</h4>
-                <div>
-                  <h4>Code:</h4>
-                  <button class="codes" vanb="true" variant="outline">
-                    <code style="background-color: transparent;">
-                        &lt;div vanb="true" variant="input" contenteditable="true" placeholder="Enter something"&gt;&lt;/div&gt;
-                      </code>
-                  </button>
-                  <h4>Output:</h4>
-                  <div vanb="true" type="text" variant="input" contenteditable="true" placeholder="Enter something">
-                  </div>
-                </div>
                 <div>
                   <h4>Code:</h4>
                   <button class="codes" vanb="true" variant="outline">
@@ -395,14 +412,14 @@
               </div>
             </div>
           </div>
-          <div id="page_5" class="page inactive_page">
+          <div id="page_6" class="page inactive_page">
             <h3>Avatar:</h3>
             <div class="section">
-              <p>Avatar:</p>
+              <h4>Avatar:</h4>
               <div class="section">
                 <p>Avatars are those nice PFPs you see in some apps. vanbUI gives few variants for avatars. You can see
                   the example avatars below.</p>
-                <p>Code for avatars:</p>
+                <h4>Code for avatars:</h4>
                 <button class="codes" vanb="true" variant="outline">
                   <code style="background-color: transparent;">
                     &lt;img vanb="true" type="avatar" variant="circle" size="small" src="https://www.psdstack.com/wp-content/uploads/2019/08/copyright-free-images-750x420.jpg"/&gt;
@@ -429,6 +446,7 @@
                   </code>
                 </button>
                 <div id="output">
+                  <h4>Outputs:</h4>
                   <img vanb="true" type="avatar" variant="circle" size="small"
                     src="https://www.psdstack.com/wp-content/uploads/2019/08/copyright-free-images-750x420.jpg" />
                   <img vanb="true" type="avatar" variant="circle" size="medium"
@@ -464,7 +482,7 @@
               </div>
             </div>
           </div>
-          <div id="page_6" class="page inactive_page">
+          <div id="page_7" class="page inactive_page">
             <h3>Accordion:</h3>
             <div class="section">
               <p>Accordions are the elements where you click on them and they show some more details about the topic.
@@ -498,7 +516,7 @@
               </div>
             </div>
           </div>
-          <div id="page_7" class="page inactive_page">
+          <div id="page_8" class="page inactive_page">
             <h3>Alert:</h3>
             <div class="section">
               <p></p>
@@ -520,7 +538,7 @@
               <h4>Varaints and types:</h4>
               <p>vanbUI has 2 types and 2 variants of alerts. (That makes it a total of 4 different styles). They are:
               </p>
-              <ol style="padding: 0 0.5rem;margin: 0 1rem;">
+              <ol>
                 <li>General variant, error type</li>
                 <li>General variant, info type</li>
                 <li>Terminal variant, error type</li>
@@ -552,7 +570,7 @@
               </div>
             </div>
           </div>
-          <div id="page_8" class="page inactive_page">
+          <div id="page_9" class="page inactive_page">
             <h3>Tooltip:</h3>
             <div class="section">
               <p>Tooltip are the element which pop up when user hovers on something. Note that tooltips are only used to
@@ -579,6 +597,76 @@
                   Tooltips might break sometimes based on the <code>position</code> property of the parent element. We
                   strongly recommend you to set the <code>position</code> property to <code>relative</code>.
                 </p>
+              </div>
+            </div>
+          </div>
+          <div id="page_10" class="page inactive_page">
+            <h3>Code:</h3>
+            <div class="section">
+              <p>Code is an element we all know. Code basically shows the contents inside it as a code (changes font to
+                monospace and styles depends on the variant).</p>
+              <h4>How to use code:</h4>
+              <p>code element contains two variants. which are</p>
+              <ol>
+                <li>Inline (default)</li>
+                <li>Block</li>
+              </ol>
+              <p>Simply define the variant attribute and vanbUI will do the magic.</p>
+              <h4>Code:</h4>
+              <button class="codes" vanb="true" variant="outline">
+                <code style="background-color: transparent;">
+                              This is &lt;code vanb="true" variant="inline"&gt;inline code&lt;/code&gt;<br>
+                              This is &lt;code vanb="true" variant="block"&gt;multiple &lt;br&gt; line &lt;br&gt; code&lt;/code&gt;<br>
+                            </code>
+              </button>
+              <div id="output" style="width: fit-content;">
+                <h4>Output:</h4>
+                <div>
+                  <p>
+                    This is <code variant="inline">word</code>
+                  </p>
+                  <p>
+                    This is <code variant="block">multiple<br>line<br>code<br></code>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="page_11" class="page inactive_page">
+            <h3>Select:</h3>
+            <div class="section">
+              <p>Select is an element which is used to chose an option from the given option.</p>
+              <h4>How to create select:</h4>
+              <p>Select element is not easy to style. So vanbUI uses JS to tweak the select element with options. In
+                general HTML select element is created using select tag and options are given inside them. You do the
+                same in vanbUI. Please not that you have to wrap your select element inside a block element like 
+                <code vanb="true" variant="inline">div</code>.<br>
+                The code below shows how you can create a select.
+              </p>
+              <h4>Code:</h4>
+              <button class="codes" vanb="true" variant="outline">
+                <code style="background-color: transparent;">
+                  &lt;div><br>
+                  &nbsp;&lt;select name="test_select" id="test_select" vanb="true"><br>
+                  &nbsp;&nbsp;&lt;option value="a">apple&lt;/option><br>
+                  &nbsp;&nbsp;&lt;option value="b">ball&lt;/option><br>
+                  &nbsp;&nbsp;&lt;option value="c">cat&lt;/option><br>
+                  &nbsp;&lt;/select><br>
+                  &lt;/div>
+                </code>
+              </button>
+              <div id="output" style="width: fit-content;">
+                <h4>Output:</h4>
+                <div>
+                  <select name="test_select" id="test_select" vanb="true">
+                    <option value="a" default>apple</option>
+                    <option value="b">ball</option>
+                    <option value="c">cat</option>
+                  </select>
+                </div>
+              </div>
+              <div class="info">
+                <p>This component uses vanbJS to tweak the original component. Users have to link the vanbJS script in the HTML files.</p>
               </div>
             </div>
           </div>

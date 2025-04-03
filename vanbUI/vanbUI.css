@@ -80,6 +80,28 @@ button[vanb="true"][variant="error"] {
     background-color: #CE3838;
 }
 
+ButtonGroup{
+    display: flex;
+}
+
+ButtonGroup button[vanb=true][variant]{
+    margin: 0;
+    border-radius: 0;
+    border-right: 1px solid white;
+    box-shadow: none;
+}
+
+ButtonGroup button:first-child[vanb=true][variant] {
+    border-top-left-radius: .3rem;
+    border-bottom-left-radius: .3rem;
+}
+
+ButtonGroup button:last-child[vanb=true][variant] {
+    border-top-right-radius: .3rem;
+    border-bottom-right-radius: .3rem;
+    border-right: 0px;
+}
+
 input[vanb="true"][type="checkbox"][variant="switch"] {
     display: none;
     font: var(--fa-font-solid);
@@ -141,7 +163,7 @@ div[vanb="true"][type="text"][variant="input"][contenteditable="true"] {
     border: none;
     border-radius: .3rem;
     width: 100%;
-    max-width: 50dvw;
+    max-width: 30dvw;
 }
 
 div[vanb="true"][type="text"][variant="input"][contenteditable="true"]::before {
@@ -369,6 +391,87 @@ img[type="avatar"][vanb="true"][size="large"] {
     height: 128px;
     width: 128px;
 }
+
+code[vanb=true] {
+    background-color: rgb(50 50 50);
+    border-radius: .3rem;
+    padding: .3rem;
+    line-height: 1.2;
+    display: inline;
+}
+
+code[variant="block"] {
+    width: 30dvw;
+    color: white;
+    border-radius: .3rem;
+    font-family: monospace;
+    background-color: #323232;
+    display: block;
+}
+
+button[vanb=true][type=select] {
+    padding: 0.7rem;
+    margin: 0.3rem;
+    background-color: #373737;
+    border: none;
+    border-radius: .3rem;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    width: 15dvw;
+}
+
+button[vanb=true][type=select]::after {
+    content: "\f078";
+    font: var(--fa-font-solid);
+}
+
+button[vanb=true][type=select]+div {
+    display: none;
+}
+
+button[vanb=true][type=select]+div[data-open] {
+    width: calc(15dvw - .4rem);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0.2rem;
+    margin: .3rem;
+    background-color: #373737;
+    border-radius: .3rem;
+    position: absolute;
+    max-height: 20dvh;
+    overflow: auto;
+}
+
+button[vanb=true][type=select]+div[data-open]::-webkit-scrollbar {
+    background-color: #212121;
+    border-top-right-radius: .3rem;
+    border-bottom-right-radius: .3rem;
+}
+
+button[vanb=true][type=select]+div[data-open]::-webkit-scrollbar-thumb {
+    background-color: #c9c9c9;
+    border-top-right-radius: .3rem;
+    border-bottom-right-radius: .3rem;
+}
+
+button[vanb=true][type=select]+div[data-open]>button {
+    padding: .7rem;
+    margin: 0.3rem;
+    border-radius: .3rem;
+    background-color: #212121;
+    border: none;
+    color: white;
+    width: calc(100% - .6rem);
+    transition: .2s ease-in-out;
+}
+
+button[vanb=true][type=select]+div[data-open]>button:hover {
+    cursor: pointer;
+    opacity: .7;
+}
+
 
 /* TODO: styling Alerts */
 /* alert[variant="dialog"] adialog{

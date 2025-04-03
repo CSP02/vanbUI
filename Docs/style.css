@@ -26,7 +26,7 @@ body {
     color: var(--primary-font-color);
     font-family: "Quicksand", sans-serif;
     letter-spacing: .6px;
-    font-weight: bold;
+    /* font-weight: bold; */
     scroll-behavior: smooth;
 }
 
@@ -40,6 +40,10 @@ ul {
     list-style-type: none;
     display: flex;
     align-items: center;
+}
+
+ol {
+    margin: 0 2.5rem;
 }
 
 footer {
@@ -101,7 +105,7 @@ h4 {
     color: var(--primary-font-color);
 }
 
-.sv_list li{
+.sv_list li {
     margin: .3rem;
 }
 
@@ -164,24 +168,29 @@ h4 {
     padding: .5rem;
 }
 
+.section h4 {
+    margin: 1.5rem 0 0 0;
+    padding: .5rem 0;
+}
+
 .section h4,
 .section p {
+    line-height: 2;
+}
+
+#outputs {
     padding: .5rem;
 }
+
+
 
 #wrapper {
     display: flex;
     height: 90dvh;
 }
 
-code {
-    background-color: rgb(50 50 50);
-    border-radius: .3rem;
-    padding: .3rem;
-}
-
 #sidebar {
-    max-width: 30dvw;
+    width: 20dvw;
     max-height: 70dvh;
 }
 
@@ -207,20 +216,20 @@ code {
 #docs_wrapper {
     margin: 1rem;
     padding: 1rem;
-    width: 100%;
+    width: calc(100% - 2rem);
     line-height: 1.5rem;
     height: 60dvh;
 }
 
 #pages_and_but {
-    width: 65dvw;
+    width: 50dvw;
     height: 90dvh;
     overflow-y: auto;
     overflow-x: hidden;
 }
 
 .page {
-    width: 60dvw;
+    width: calc(100% - 2.6rem);
     height: 65dvh;
     position: absolute;
     overflow-y: auto;
@@ -262,7 +271,7 @@ code {
 
 .codes code {
     padding: 0;
-    line-height: 1.2;
+    line-height: 1.7;
 }
 
 .note,
@@ -382,15 +391,25 @@ option {
     color: black;
 }
 
+code {
+    background-color: rgb(50 50 50);
+    border-radius: .3rem;
+    padding: .3rem;
+    line-height: 1.2;
+    display: inline;
+}
+
 /**
 * ? Element FX
 */
 ::-webkit-scrollbar {
     width: .2rem;
+    height: .2rem;
 }
 
 ::-webkit-scrollbar-thumb {
     border-radius: 45px;
+    height: .2rem;
     width: .2rem;
     background-color: rgb(223, 223, 223);
 }

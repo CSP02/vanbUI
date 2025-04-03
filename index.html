@@ -19,6 +19,7 @@
 </head>
 
 <body>
+    <script src="./vanbUI/vanbJS.js"></script>
     <div id="page_wrapper">
         <nav id="navigation" class="nav">
             <div id="logo_and_open">
@@ -182,16 +183,18 @@
                 <div id="buttons_iframe_holder">
                     <div id="button_fields">
                         <label for="variant_selector">Variant selector</label>
-                        <select name="variant_selector" id="variant_selector">
-                            <option value="primary">Primary</option>
-                            <option value="success">success</option>
-                            <option value="error">Error</option>
-                            <option value="white">white</option>
-                            <option value="black">black</option>
-                            <option value="outline">outline</option>
-                            <option value="ghost">ghost</option>
-                            <option value="loading">loading</option>
-                        </select>
+                        <div>
+                            <select name="variant_selector" id="variant_selector" vanb="true">
+                                <option value="primary">Primary</option>
+                                <option value="success">success</option>
+                                <option value="error">Error</option>
+                                <option value="white">white</option>
+                                <option value="black">black</option>
+                                <option value="outline">outline</option>
+                                <option value="ghost">ghost</option>
+                                <option value="loading">loading</option>
+                            </select>
+                        </div>
                     </div>
                     <div id="tooltip_wrapper">
                         <button vanb="true" variant="primary" tooltip="true" id="live_example">Primary</button>
