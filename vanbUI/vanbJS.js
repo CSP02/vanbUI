@@ -82,4 +82,12 @@ window.addEventListener("load", load => {
         selectEl.parentElement.appendChild(optionsHolder);
     });
     //? end of select elements
+    //? start of dialog element
+    const dialogs = document.querySelectorAll("dialog");
+    dialogs.forEach(dialog => {
+        const dialogOpener = document.querySelector(`button[dialog="${dialog.getAttribute("name")}"]`);
+        dialogOpener.addEventListener("click", e => {
+            dialog.showModal();
+        })
+    });
 })

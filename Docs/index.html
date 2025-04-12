@@ -43,6 +43,9 @@
       <div id="sidebar">
         <ul>
           <li><a href="#" class="active page_link">Introduction</a></li>
+        </ul>
+        <ul>
+          <h4>Components:</h4>
           <li><a href="#" class="inactive page_link">Button</a></li>
           <li><a href="#" class="inactive page_link">Button Group</a></li>
           <li><a href="#" class="inactive page_link">Checkbox</a></li>
@@ -53,6 +56,7 @@
           <li><a href="#" class="inactive page_link">Tooltip</a></li>
           <li><a href="#" class="inactive page_link">Code</a></li>
           <li><a href="#" class="inactive page_link">Select</a></li>
+          <li><a href="#" class="inactive page_link">dialog</a></li>
         </ul>
       </div>
       <div id="pages_and_but">
@@ -98,7 +102,8 @@
                     Linking
                     <a href="https://fontawesome.com">font-awesome</a> cdn is
                     important because some components in this library uses
-                    font-awesome icons. vanbUI also uses vanbJS for adding some tweaks to the components. so you have to link the vanbJS cdn as well. 
+                    font-awesome icons. vanbUI also uses vanbJS for adding some tweaks to the components. so you have to
+                    link the vanbJS cdn as well.
                   </p>
                 </div>
               </div>
@@ -242,7 +247,8 @@
             <h3>Button Group:</h3>
             <div class="section">
               <p>
-                You can group the buttons in vanbUI and yes you can group different styled buttons. Use the code below to create a button group.
+                You can group the buttons in vanbUI and yes you can group different styled buttons. Use the code below
+                to create a button group.
               </p>
               <h4>Code:</h4>
               <div id="button_inp_but" class="code_holder">
@@ -639,7 +645,7 @@
               <h4>How to create select:</h4>
               <p>Select element is not easy to style. So vanbUI uses JS to tweak the select element with options. In
                 general HTML select element is created using select tag and options are given inside them. You do the
-                same in vanbUI. Please not that you have to wrap your select element inside a block element like 
+                same in vanbUI. Please not that you have to wrap your select element inside a block element like
                 <code vanb="true" variant="inline">div</code>.<br>
                 The code below shows how you can create a select.
               </p>
@@ -666,7 +672,56 @@
                 </div>
               </div>
               <div class="info">
-                <p>This component uses vanbJS to tweak the original component. Users have to link the vanbJS script in the HTML files.</p>
+                <p>This component uses vanbJS to tweak the original component. Users have to link the vanbJS script in
+                  the HTML files.</p>
+              </div>
+            </div>
+          </div>
+          <div id="page_12" class="page inactive_page">
+            <h3>Dialog:</h3>
+            <div class="section">
+              <p>Dialog element is an element which will have a backdrop and shows a modal.
+                This modal can contain anything. Like a form, description, info, etc.
+                You can add any element into this modal. Please make sure that you put a button inside your dialog to
+                close the dialog.
+                As of now dialogs cannot be closed without a button.
+              </p>
+              <p>Use the attributes <code>name</code> to assign a name to the dialog. Now you can use this name to link
+                the dialog to a button using the attribute <code>dialog</code>.
+                By doing this when the user clicks the button, the dialog appears. See the example below for better
+                understanding.</p>
+              <p>You can create a dialog by using this code below</p>
+              <h4>Code:</h4>
+              <button class="codes" vanb="true" variant="outline">
+                <code style="background-color: transparent;">
+                  &lt;dialog name="open"><br>
+                  &nbsp;&lt;p>This is a dialog..... Click okay to close this dialog. Lorem ipsum dolor sit amet consectetur
+                  adipisicing elit. Nostrum cupiditate vitae distinctio, tenetur, iste labore recusandae, a incidunt
+                  accusantium sint explicabo cum officiis dicta odit velit veniam perspiciatis quidem quasi.
+                  Soluta, excepturi debitis eum nostrum eius reiciendis vel. Eligendi nam, minima recusandae esse rem
+                  mollitia consequuntur velit qui reiciendis! Aperiam veritatis natus doloremque reprehenderit, nemo
+                  laboriosam voluptatibus vero eligendi esse!&lt;/p><br>
+                  &nbsp;&lt;button vanb="true" variant="white" id="dialog_close">Okay&lt;/button><br>
+                  &lt;/dialog><br>
+                  &lt;button dialog="open" vanb="true" variant="white">Open dialog&lt;/button>
+                </code>
+              </button>
+              <div id="output" style="width: fit-content;">
+                <h4>Output:</h4>
+                <dialog name="open">
+                  <p>This is a dialog..... Click okay to close this dialog. Lorem ipsum dolor sit amet consectetur
+                    adipisicing elit. Nostrum cupiditate vitae distinctio, tenetur, iste labore recusandae, a incidunt
+                    accusantium sint explicabo cum officiis dicta odit velit veniam perspiciatis quidem quasi.
+                    Soluta, excepturi debitis eum nostrum eius reiciendis vel. Eligendi nam, minima recusandae esse rem
+                    mollitia consequuntur velit qui reiciendis! Aperiam veritatis natus doloremque reprehenderit, nemo
+                    laboriosam voluptatibus vero eligendi esse!</p>
+                  <button vanb="true" variant="white" id="dialog_close">Okay</button>
+                </dialog><br>
+                <button dialog="open" vanb="true" variant="white">Open dialog</button>
+              </div>
+              <div class="info">
+                <p>This component uses vanbJS to tweak the original component. Users have to link the vanbJS script in
+                  the HTML files.</p>
               </div>
             </div>
           </div>

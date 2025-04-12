@@ -129,4 +129,10 @@ window.onload = () => {
 
         tryItCode.innerText = text
     })
+
+    const dialogCloser = document.getElementById("dialog_close");
+    dialogCloser.addEventListener("click", e => {
+        const dialog = document.querySelector("dialog[name='open']");
+        dialog.close();
+    })
 }

@@ -402,12 +402,12 @@ code {
 /**
 * ? Element FX
 */
-::-webkit-scrollbar {
+div::-webkit-scrollbar {
     width: .2rem;
     height: .2rem;
 }
 
-::-webkit-scrollbar-thumb {
+div::-webkit-scrollbar-thumb {
     border-radius: 45px;
     height: .2rem;
     width: .2rem;
